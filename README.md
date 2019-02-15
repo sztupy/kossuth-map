@@ -16,4 +16,6 @@ osmosis –read-pbf-fast hungary.osm.pbf file=“hungary.osm.pbf” –way-key k
 osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-headline | grep -i kossuth > streets.csv
 ```
 
-Next to generate the vornoi diagram I used `rubyvor`. Dependent on the scaling used it will generate a more-or less nice SVG, with the relevant data. You can find a generated svg called `dia.dvg`, and an export to png called `dia.png`
+Next to generate the vornoi diagram I used `rubyvor`. Dependent on the scaling used it will generate a more-or less nice SVG, with the relevant data. You can find a generated svg called `dia.dvg`, and an export to png called `dia.png`:
+
+![Voronoi of Hungary](https://raw.githubusercontent.com/sztupy/kossuth-map/master/dia.png)
