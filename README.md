@@ -73,7 +73,7 @@ osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-h
 
 ### Points furthest away in Hungary from any sports complex
 
-There's plenty of sports complex's in Hungary. To be the furthest from one, you have to be in the Hortobágy National Park.
+There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be in the Hortobágy National Park.
 
 Large resolution map:
 ![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/stadionok.png)
