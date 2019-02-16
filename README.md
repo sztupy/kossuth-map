@@ -55,9 +55,9 @@ In the generated output you can find the following files:
 * `.geojson` showing all of the nodes, and the selected clusters along with some metadata. The bounday of the country is also included for reference.
 * `.json` additional file containing the following details:
   * `boundingBox`: the bounding box of the country and the nodes
-  * `points`: the list of all potential points where there is a local maximum for distance - along with the distance itself, and where that point lies. The format is `[[pointLon,pointLat],[destinationLon,destinationLat],distanceInKm]`
-  * `destinations`: the list of all potential points filtered down by clustering points that are close to each other out. This will effectevily partition the country up into clusters that are cover similar areas
-  * `statistics`: this will contain some average and median calculations. The main thing to note here is the `destMedian`, as this will show the median value of the distances of the clusters. As the clusters will effectively cover similar areas, this means half of the country will be covered by half of the clusters, and the other half by the others. So the median distance would mean that you have a 50% chance to be in a cluster where no matter where you are you are closer to a node than the specified distance. In other words if someone drops you off randomly in the country it's likely you'll be at most this distance to the nearest node.
+  * `points`: the list of all potential points where there is a local maximum for distance, along with a link to one of the neighbours and this distance. The format is `[[pointLon,pointLat],[destinationLon,destinationLat],distanceInKm]`
+  * `destinations`: the list of all potential points filtered down by clustering points that are close to each other out. This will effectevily partition the country up into clusters that are cover similar areas. For the top X clusters this will not only contain one neighbouring point but others as well - which might be slightly further to the point though.
+  * `statistics`: this will contain some average and median calculations. The main thing to note here is the `destMedian`, as this will show the median value of the distances of the clusters. As the clusters will effectively cover similar areas, this means half of the country will be covered by half of the clusters, and the other half by the others. So the median distance would mean that you have a 50% chance to be in a cluster where no matter where you are you are closer to a node than the specified distance. In other words if someone drops you off randomly in the country it's likely you'll be at most this distance to the nearest. Note: this is only a rough approximation and will only be true in case the points are not too sparse.
 
 Examples
 --------
@@ -114,7 +114,7 @@ Also it's widely known that there are a lot of pubs in the UK. However there's n
 
 The best you can do is 13km in Wales, and 11.8km in England (excluding Lundi Isle where it's 26km).
 
-On average, if you are in a random place in Great Britain, it's likely you will be within 15km of a Distillery
+On average, if you are in a random place in Great Britain, it's likely you will be within 0.5km of a pub
 
 Large resolution map:
 ![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/gb_pubs.jpg)
@@ -125,7 +125,7 @@ Data source: https://www.getthedata.com/open-pubs
 
 The Isles are left out from distilleries unfortunately, especially Shetland, where Unst is 240km away from the nearest distillery. On the mainland... well you have to head towards England to get 102km away from Scotch.
 
-On average, if you are in a random place in Scotland, it's likely you will be within 7km of a Distillery
+On average, if you are in a random place in Scotland, it's likely you will be within 15km of a Distillery
 
 Large resolution map:
 ![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/scottish_distilleries.jpg)

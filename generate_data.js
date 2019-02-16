@@ -65,6 +65,9 @@ const FOUND_NODE_ARROW_STROKE_WIDTH = config.FOUND_NODE_ARROW_STROKE_WIDTH || 6;
 const FOUND_NODE_STROKE_WIDTH = config.FOUND_NODE_STROKE_WIDTH || 3;
 const FOUND_NODE_RADIUS = config.FOUND_NODE_RADIUS || IMAGE_WIDTH / 100;
 
+const FOUND_NODE_NEIGHBOUR_STROKE_COLOR = config.FOUND_NODE_NEIGHBOUR_STROKE_COLOR || "rgba(0,64,0,0.5)";
+const FOUND_NODE_NEIGHBOUR_STROKE_WIDTH = config.FOUND_NODE_NEIGHBOUR_STROKE_WIDTH || 3;
+
 const FOUND_NODE_FONT_SIZE = Math.max(15,Math.round(IMAGE_WIDTH/150));
 const FOUND_NODE_FONT = config.FOUND_NODE_FONT || FOUND_NODE_FONT_SIZE + "px Arial";
 const FOUND_NODE_FONT_FILL_COLOR = config.FOUND_NODE_FONT_FILL_COLOR || "#000000";
@@ -274,13 +277,16 @@ console.log("Obtaining distance data");
 // find the furthest away node from each of our selected points
 var distanceMap = [];
 for (let point of potentialPoints) {
-    let otherPoint = points[delaunay.find(point[0],point[1])];
+    let pointNum = delaunay.find(point[0],point[1]);
+    let otherPoint = points[pointNum];
     let p1 = new LatLon(point[1]/HEIGHT_ADJUST, point[0]);
     let p2 = new LatLon(otherPoint[1]/HEIGHT_ADJUST, otherPoint[0]);
     let d = p1.distanceTo(p2);
     distanceMap.push([d, {
         point: point,
-        destination: otherPoint
+        destination: otherPoint,
+        destinationId: pointNum,
+        neighbours: [otherPoint]
     }]);
 
     statisticsDump.points.push([[p1.lon, p1.lat],[p2.lon, p2.lat],d/1000]);
@@ -308,11 +314,22 @@ while (index < distanceMap.length) {
     }
     if (minDist > CLUSTERING_MINIMUM_DISTANCE * 1000) {
         if (distanceCluster.length < NUMBER_OF_CLUSTERS) {
+            for (const pointId of delaunay.neighbors(data[1].destinationId)) {
+                let otherPoint = points[pointId];
+                let p1 = new LatLon(data[1].point[1]/HEIGHT_ADJUST, data[1].point[0]);
+                let p2 = new LatLon(otherPoint[1]/HEIGHT_ADJUST, otherPoint[0]);
+                let d = p1.distanceTo(p2);
+
+                if (Math.abs(d - data[0]) < d*0.1) {
+                    data[1].neighbours.push(otherPoint);
+                }
+            }
             distanceCluster.push(data);
         }
         statisticsDump.destinations.push({
             from: [data[1].point[0], data[1].point[1]/HEIGHT_ADJUST],
             to: [data[1].destination[0], data[1].destination[1]/HEIGHT_ADJUST],
+            neighbours: data[1].neighbours.map(a => [a[0], a[1]/HEIGHT_ADJUST]),
             distance: data[0] / 1000,
             position: statisticsDump.destinations.length
         });
@@ -500,6 +517,34 @@ for (let i = 0; i < distanceCluster.length; i++) {
     svgCtx.moveTo(textX, textY + FOUND_NODE_TEXT_HEIGHT/2);
     svgCtx.lineTo(getX(data.point[0]), getY(data.point[1]));
     svgCtx.stroke();
+
+    let first = true;
+    for (let n of data.neighbours) {
+        svgCtx.strokeStyle = ctx.strokeStyle = FOUND_NODE_NEIGHBOUR_STROKE_COLOR;
+        svgCtx.lineWidth = ctx.lineWidth = FOUND_NODE_NEIGHBOUR_STROKE_WIDTH;
+
+        ctx.beginPath();
+        ctx.moveTo(getX(data.point[0]), getY(data.point[1]));
+        ctx.lineTo(getX(n[0]),getY(n[1]));
+        ctx.stroke();
+
+        svgCtx.beginPath();
+        svgCtx.moveTo(getX(data.point[0]), getY(data.point[1]));
+        svgCtx.lineTo(getX(n[0]),getY(n[1]));
+        svgCtx.stroke();
+
+        if (!first) {
+            turfFeatures.push(
+                turf.lineString([[data.point[0], data.point[1]/HEIGHT_ADJUST], [n[0], n[1]/HEIGHT_ADJUST]],
+                {
+                    "name": "Other distance",
+                    "stroke": "#229922",
+                    "stroke-width": 1.5
+                })
+            );
+        }
+        first = false;
+    }
 
     textBoxes.push([textX, textY, textX+textWidth, textY+FOUND_NODE_TEXT_HEIGHT]);
 

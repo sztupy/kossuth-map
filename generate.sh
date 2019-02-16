@@ -6,8 +6,8 @@ generate_details() {
     ./generate_data.js "configs/$1.json"
     convert "images/$1.png" -background white -alpha Remove -quality 70 "images/$1.jpg"
     rm "images/$1.png"
-    gzip "images/$1.svg"
-    gzip "images/$1.json"
+    gzip -f "images/$1.svg"
+    gzip -f "images/$1.json"
 }
 
 echo "Kossuth"
