@@ -30,11 +30,12 @@ Once the setup is done change the constants at the start of `generate_data.js` t
 Some useful config values to change:
 
 * `INPUT_FILE_NAME`: The input file containing the set of points we wish to avoid. It's a JSON array of `[lon,lat]` pairs preferably in WGS84.
-* `BOUNDARY_FILE_NAME`: The file containig the boundary of the country. It should only contain one large polygon, countries which are made out of multiple polygons are not yet tested, and can likely lead to some errorneous results.
+* `BOUNDARY_FILE_NAME`: The file containig the boundary of the country in geoJSON multi-polygon format. For fast results only run it one land, but the script should work fine with datasets containing islands as well.
 * `OUTPUT_FILE_NAME`: The file where the rendered image should be saved in PNG format.
 * `IMAGE_WIDTH`: Set this to the preferred image width size. The height of the image will be calculated automatically to keep the aspect relations.
 * `NUMBER_OF_CLUSTERS`: The amount of points we wish to obtain at the end.
 * `CLUSTERING_MINUMUM_DISTANCE`: Sets how far away two points need to be (in km) in order to be considered for inclusion.
+* `FAST_BORDER_PROCESSING`: Turning it on will speed up processing of points around the border, but might skip some points in concave border designs. Can be turned on safely for countries which are more-or-less convex shaped. For very concave countries and countries with lots of islands it should be disabled.
 
 You can also change the styling on the output by changing any of the other values
 
@@ -91,3 +92,12 @@ Large resolution map:
 ![UK Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/uk_pubs.png)
 
 Data source: https://www.getthedata.com/open-pubs
+
+### Points furthest away in Scotland from a distillery
+
+The Isles are left out from distilleries, and on the Mainland you actually have to head to England to get far away from some Scotch.
+
+Large resolution map:
+![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/scottish_distilleries.png)
+
+Dataset is from here: http://adn.biol.umontreal.ca/~numericalecology/data/scotch.html
