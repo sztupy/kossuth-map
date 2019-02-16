@@ -4,7 +4,7 @@ console.log('Preparing data');
 
 // configuration
 const INPUT_FILE_NAME = 'datasets/gb_pubs.json';
-const BOUNDARY_FILE_NAME = 'datasets/great_britain.json';
+const BOUNDARY_FILE_NAME = 'boundaries/great_britain.json';
 const OUTPUT_FILE_NAME = 'images/gb_pubs.png';
 
 const IMAGE_WIDTH = 10000; // px
