@@ -1,2 +1,3 @@
 *.osm
 *.osm.pbf
+node_modules
