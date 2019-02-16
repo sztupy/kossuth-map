@@ -3,20 +3,23 @@
 console.log('Preparing data');
 
 // configuration
-const INPUT_FILE_NAME = 'datasets/uk_pubs.json';
-const BOUNDARY_FILE_NAME = 'datasets/scotland.json';
-const OUTPUT_FILE_NAME = 'images/pubs_scotland.png';
+const INPUT_FILE_NAME = 'datasets/gb_pubs.json';
+const BOUNDARY_FILE_NAME = 'datasets/great_britain.json';
+const OUTPUT_FILE_NAME = 'images/gb_pubs.png';
 
 const IMAGE_WIDTH = 10000; // px
 
-const NUMBER_OF_CLUSTERS = 10;
+const NUMBER_OF_CLUSTERS = 40;
 const CLUSTERING_MINIMUM_DISTANCE = 100; //in km
-const FAST_BORDER_PROCESSING = false; // turning it on will skip some edge cases on the country boundaries, but make computation on them faster
+const BORDER_PROCESSING_MODE = 1;
+// 0: slowest; gives best results on concave countries with lots of islands
+// 1: middle ground; gives okay results for countries with lots of islands, but can skip some border points in concave countries
+// 2: fastest; works okay for single polygon, convex countries with no islands
 
 const NODE_FILL_COLOR = "rgba(80,80,80, 0.25)";
 const NODE_STROKE_COLOR = "rgba(0,0,0, 0.5)";
 const NODE_STROKE_WIDTH = 0.5;
-const NODE_RADIUS = IMAGE_WIDTH / 1000;
+const NODE_RADIUS = IMAGE_WIDTH / 500;
 
 const VORONOI_CELL_STROKE_COLOR = "#333333";
 const VORONOI_CELL_STROKE_WIDTH = 0.5;
@@ -180,7 +183,10 @@ var intersectPoints = [];
 // collects all points which intersect our boundary
 for (let poly of voronoi.cellPolygons()) {
     for (let i=0; i<poly.length; i++) {
-        if (!FAST_BORDER_PROCESSING || (locations.get(pointToKey(poly[i])) != locations.get(pointToKey(poly[(i + 1) % poly.length])))) {
+        if (BORDER_PROCESSING_MODE == 0 ||
+            BORDER_PROCESSING_MODE == 1 && (!locations.get(pointToKey(poly[i])) || !locations.get(pointToKey(poly[(i + 1) % poly.length]))) ||
+            BORDER_PROCESSING_MODE == 2 && (locations.get(pointToKey(poly[i])) != locations.get(pointToKey(poly[(i + 1) % poly.length])))
+           ) {
             let lineTurf = turf.lineString([poly[i], poly[(i + 1) % poly.length]]);
             let intersects = turf.lineIntersect(lineTurf, boundaryTurf);
             turf.featureEach(intersects, (currentFeature, _) => {

@@ -35,7 +35,7 @@ Some useful config values to change:
 * `IMAGE_WIDTH`: Set this to the preferred image width size. The height of the image will be calculated automatically to keep the aspect relations.
 * `NUMBER_OF_CLUSTERS`: The amount of points we wish to obtain at the end.
 * `CLUSTERING_MINUMUM_DISTANCE`: Sets how far away two points need to be (in km) in order to be considered for inclusion.
-* `FAST_BORDER_PROCESSING`: Turning it on will speed up processing of points around the border, but might skip some points in concave border designs. Can be turned on safely for countries which are more-or-less convex shaped. For very concave countries and countries with lots of islands it should be disabled.
+* `BORDER_PROCESSING_MODE`: Determines what kind of intersections between the Voronoi-edges and the border should be checked. 0 is the slowest but most complete, 1 is a middle ground, which should work for most cases, but might skip some points around concave features and islands, and 2 is a fast solution that only gives satisfactory results on single-polygon, convex countries.
 
 You can also change the styling on the output by changing any of the other values
 
@@ -84,12 +84,12 @@ Small resolution map:
 
 The dataset is from a list I gathered for another project called Magyar Stadionok: https://github.com/sztupy/magyar-stadionok
 
-### Points furthest away on mainland Great Britain from a pub
+### Points furthest away in Great Britain from a pub
 
 Also it's widely known that there are a lot of pubs in the UK. However there's not that many of them in the Highlands, you can be 94km from one if you go to the right spot. The best you can do is 18km in Wales, and 12.5km in England.
 
 Large resolution map:
-![UK Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/uk_pubs.png)
+![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/gb_pubs.png)
 
 Data source: https://www.getthedata.com/open-pubs
 
