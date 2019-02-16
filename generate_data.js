@@ -305,6 +305,7 @@ console.log("Generating image");
 var turfFeatures = [];
 
 // draw the nodes
+
 for (let point of points) {
     svgCtx.fillStyle = ctx.fillStyle = NODE_FILL_COLOR;
     svgCtx.strokeStyle = ctx.strokeStyle = NODE_STROKE_COLOR;
@@ -318,7 +319,7 @@ for (let point of points) {
             {
                 "name": "Node",
                 "marker-size": "small",
-                "marker-color": "#000000",
+                "marker-color": "#666666",
             }
         )
     )
@@ -341,15 +342,17 @@ for (let polygon of boundary) {
             drawPoly(svgCtx, subpolygon);
     }
 }
-turfFeatures.push(
-    turf.multiPolygon(
-        boundary.map(poly => poly.map(subpoly => subpoly.map(point => [point[0],point[1]/HEIGHT_ADJUST]))),
-        {
-            "name":"Country Boundary",
-            "stroke": "#000000",
-            "stroke-width": 5,
-            "fill-opacity": 0
-        }
+
+boundary.forEach(poly =>
+    turfFeatures.push(
+        turf.multiLineString(
+            poly.map(subpoly => subpoly.map(point => [point[0],point[1]/HEIGHT_ADJUST])),
+            {
+                "name":"Country Boundary",
+                "stroke": "#000000",
+                "stroke-width": 5
+            }
+        )
     )
 );
 
@@ -410,7 +413,7 @@ for (let i = 0; i < distanceCluster.length; i++) {
 
     let textX = getX(data.point[0]) + FOUND_NODE_RADIUS;
     let textY = getY(data.point[1]) + FOUND_NODE_RADIUS;
-    let text = data.point[1]/HEIGHT_ADJUST+"\n"+data.point[0]+"\n"+distanceCluster[i][0]/1000+"km";
+    let text = data.point[1]/HEIGHT_ADJUST+"\n"+data.point[0]+"\n"+distanceCluster[i][0]/1000+"km ("+(i+1)+".)";
     let textWidth = ctx.measureText(text).width;
 
     // crappy algorithm to make the textboxes not overlap
@@ -461,16 +464,37 @@ for (let i = 0; i < distanceCluster.length; i++) {
 
     textBoxes.push([textX, textY, textX+textWidth, textY+FOUND_NODE_TEXT_HEIGHT]);
 
-    let feature = turf.point([data.point[0], data.point[1]/HEIGHT_ADJUST], {
-        "name":"Destination",
-        "marker-size":"large",
-        "marker-color": "#ffffff",
-        "marker-symbol":"cross",
-        "info": text,
-        "distance": distanceCluster[i][0]/1000,
-        "opposite-point": [data.destination[0], data.destination[1]/HEIGHT_ADJUST]
-    });
-    turfFeatures.push(feature);
+    let symbol = (i+1)+'';
+    if (i>8) {
+        symbol = String.fromCharCode(i + 97 - 10)
+    }
+    if (i>35) {
+        symbol = 'cross';
+    }
+
+    turfFeatures.push(
+        turf.point([data.point[0], data.point[1]/HEIGHT_ADJUST], {
+            "name": "Destination",
+            "marker-size": "large",
+            "marker-color": "#00ff00",
+            "marker-symbol": symbol,
+            "info": text,
+            "distance": distanceCluster[i][0]/1000,
+            "opposite-point": [data.destination[0], data.destination[1]/HEIGHT_ADJUST],
+            "position": i+1
+        })
+    );
+
+    turfFeatures.push(
+        turf.lineString([[data.point[0], data.point[1]/HEIGHT_ADJUST], [data.destination[0], data.destination[1]/HEIGHT_ADJUST]],
+        {
+            "name": "Distance",
+            "stroke": "#33ff33",
+            "stroke-width": 2.5,
+            "distance": distanceCluster[i][0]/1000,
+            "position": i+1
+        })
+    );
 }
 
 let geoJSONData = turf.featureCollection(turfFeatures);
