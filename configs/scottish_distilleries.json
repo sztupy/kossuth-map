@@ -1,7 +1,7 @@
 {
     "INPUT_FILE_NAME": "datasets/distilleries.json",
     "BOUNDARY_FILE_NAME": "boundaries/scotland.json",
-    "OUTPUT_FILE_NAME": "images/scottish_distilleries.png",
+    "OUTPUT_FILE_NAME": "images/scottish_distilleries",
     "CLUSTERING_MINIMUM_DISTANCE": 50,
     "NUMBER_OF_CLUSTERS": 40,
     "IMAGE_WIDTH": 10000

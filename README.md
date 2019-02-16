@@ -40,7 +40,7 @@ Some useful config values you can change:
 
 * `INPUT_FILE_NAME`: The input file containing the set of points we wish to avoid. It's a JSON array of `[lon,lat]` pairs preferably in WGS84.
 * `BOUNDARY_FILE_NAME`: The file containig the boundary of the country in geoJSON multi-polygon format. For fast results only run it one land, but the script should work fine with datasets containing islands as well.
-* `OUTPUT_FILE_NAME`: The file where the rendered image should be saved in PNG format.
+* `OUTPUT_FILE_NAME`: The file where the rendered image should be saved without extension. A `.png`, `.svg`, `.geojson` and `.json` file will be generated with thet filename prefix.
 * `IMAGE_WIDTH`: Set this to the preferred image width size. The height of the image will be calculated automatically to keep the aspect relations.
 * `NUMBER_OF_CLUSTERS`: The amount of points we wish to obtain at the end.
 * `CLUSTERING_MINUMUM_DISTANCE`: Sets how far away two points need to be (in km) in order to be considered for inclusion.

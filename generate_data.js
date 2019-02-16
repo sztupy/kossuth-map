@@ -65,12 +65,12 @@ const FOUND_NODE_ARROW_STROKE_WIDTH = config.FOUND_NODE_ARROW_STROKE_WIDTH || 6;
 const FOUND_NODE_STROKE_WIDTH = config.FOUND_NODE_STROKE_WIDTH || 3;
 const FOUND_NODE_RADIUS = config.FOUND_NODE_RADIUS || IMAGE_WIDTH / 100;
 
-var fontSize = Math.max(15,Math.round(IMAGE_WIDTH/150));
-const FOUND_NODE_FONT = config.FOUND_NODE_FONT || fontSize + "px Arial";
+const FOUND_NODE_FONT_SIZE = Math.max(15,Math.round(IMAGE_WIDTH/150));
+const FOUND_NODE_FONT = config.FOUND_NODE_FONT || FOUND_NODE_FONT_SIZE + "px Arial";
 const FOUND_NODE_FONT_FILL_COLOR = config.FOUND_NODE_FONT_FILL_COLOR || "#000000";
 const FOUND_NODE_FONT_STROKE_COLOR = config.FOUND_NODE_FONT_STROKE_COLOR || "#FFFFFF";
-const FOUND_NODE_FONT_STROKE_WIDTH = config.FOUND_NODE_FONT_STROKE_WIDTH || fontSize/6;
-const FOUND_NODE_TEXT_HEIGHT = config.FOUND_NODE_TEXT_HEIGHT || fontSize*3.2;
+const FOUND_NODE_FONT_STROKE_WIDTH = config.FOUND_NODE_FONT_STROKE_WIDTH || FOUND_NODE_FONT_SIZE/6;
+const FOUND_NODE_TEXT_HEIGHT = config.FOUND_NODE_TEXT_HEIGHT || FOUND_NODE_FONT_SIZE*3.2;
 // No way to get this automated using HTML5 Canvas
 
 //requires
@@ -78,6 +78,12 @@ const { Delaunay } = require('d3-delaunay');
 const { createCanvas } = require('canvas');
 const turf = require('@turf/turf');
 const LatLon = require('geodesy').LatLonEllipsoidal;
+const jsdom = require('jsdom');
+const C2S = require('canvas2svg');
+if (!global.XMLSerializer) {
+    global.XMLSerializer = require("w3c-xmlserializer/lib/XMLSerializer").interface;
+}
+
 
 const points = JSON.parse(fs.readFileSync(INPUT_FILE_NAME));
 const boundary = JSON.parse(fs.readFileSync(BOUNDARY_FILE_NAME));
@@ -142,6 +148,7 @@ const SIZE_Y = Math.round(SIZE_X / WIDTH * HEIGHT);
 const boundaryTurf = turf.multiPolygon(boundary);
 const canvas = createCanvas(SIZE_X, SIZE_Y);
 const ctx = canvas.getContext('2d');
+const svgCtx = new C2S({width: SIZE_X, height: SIZE_Y, document: new jsdom.JSDOM().window.document});
 
 console.log('Generating Voronoi Diagram');
 // calculate the data
@@ -295,58 +302,87 @@ while (distanceCluster.length < NUMBER_OF_CLUSTERS && index < distanceMap.length
 }
 
 console.log("Generating image");
+var turfFeatures = [];
 
 // draw the nodes
 for (let point of points) {
-    ctx.fillStyle = NODE_FILL_COLOR;
-    ctx.strokeStyle = NODE_STROKE_COLOR;
-    ctx.lineWidth = NODE_STROKE_WIDTH;
+    svgCtx.fillStyle = ctx.fillStyle = NODE_FILL_COLOR;
+    svgCtx.strokeStyle = ctx.strokeStyle = NODE_STROKE_COLOR;
+    svgCtx.lineWidth = ctx.lineWidth = NODE_STROKE_WIDTH;
     drawCircle(ctx, point, NODE_RADIUS);
+    drawCircle(svgCtx, point, NODE_RADIUS);
+
+    turfFeatures.push(
+        turf.point(
+            [point[0], point[1]/HEIGHT_ADJUST],
+            {
+                "name": "Node",
+                "marker-size": "small",
+                "marker-color": "#000000",
+            }
+        )
+    )
 }
 
 // draw all cells, and collect the cell boundaries
 for (let poly of voronoi.cellPolygons()) {
-    ctx.strokeStyle = VORONOI_CELL_STROKE_COLOR;
-    ctx.lineWidth = VORONOI_CELL_STROKE_WIDTH;
+    svgCtx.strokeStyle = ctx.strokeStyle = VORONOI_CELL_STROKE_COLOR;
+    svgCtx.lineWidth = ctx.lineWidth = VORONOI_CELL_STROKE_WIDTH;
     drawPoly(ctx, poly);
+    drawPoly(svgCtx, poly);
 };
 
 // draw the boundary
-ctx.strokeStyle = BOUNDARY_STROKE_COLOR;
-ctx.lineWidth = BOUNDARY_STROKE_WIDTH;
+svgCtx.strokeStyle = ctx.strokeStyle = BOUNDARY_STROKE_COLOR;
+svgCtx.lineWidth = ctx.lineWidth = BOUNDARY_STROKE_WIDTH;
 for (let polygon of boundary) {
     for (let subpolygon of polygon) {
             drawPoly(ctx, subpolygon);
+            drawPoly(svgCtx, subpolygon);
     }
 }
+turfFeatures.push(
+    turf.multiPolygon(
+        boundary.map(poly => poly.map(subpoly => subpoly.map(point => [point[0],point[1]/HEIGHT_ADJUST]))),
+        {
+            "name":"Country Boundary",
+            "stroke": "#000000",
+            "stroke-width": 5,
+            "fill-opacity": 0
+        }
+    )
+);
 
 // draw the points from the voronoi dataset
 for (let [key, value] of locations) {
     let point = keyToPoint(key);
-    ctx.fillStyle = value ? VORONOI_NODE_ACTIVE_FILL_COLOR : VORONOI_NODE_INACTIVE_FILL_COLOR;
-    ctx.strokeStyle = value ? VORONOI_NODE_ACTIVE_STROKE_COLOR : VORONOI_NODE_INACTIVE_STROKE_COLOR;
-    ctx.lineWidth = VORONOI_NODE_STROKE_WIDTH;
+    svgCtx.fillStyle = ctx.fillStyle = value ? VORONOI_NODE_ACTIVE_FILL_COLOR : VORONOI_NODE_INACTIVE_FILL_COLOR;
+    svgCtx.strokeStyle = ctx.strokeStyle = value ? VORONOI_NODE_ACTIVE_STROKE_COLOR : VORONOI_NODE_INACTIVE_STROKE_COLOR;
+    svgCtx.lineWidth = ctx.lineWidth = VORONOI_NODE_STROKE_WIDTH;
     drawCircle(ctx, point, VORONOI_NODE_RADIUS);
+    drawCircle(svgCtx, point, VORONOI_NODE_RADIUS);
 }
 
 // draw the vertices on the boundary
 for (let polygon of boundary) {
     for (let subpolygon of polygon) {
         for (let point of subpolygon) {
-            ctx.fillStyle = BOUNDARY_VERTEX_FILL_COLOR;
-            ctx.strokeStyle = BOUNDARY_VERTEX_STROKE_COLOR;
-            ctx.lineWidth = BOUNDARY_VERTEX_STROKE_WIDTH;
+            svgCtx.fillStyle = ctx.fillStyle = BOUNDARY_VERTEX_FILL_COLOR;
+            svgCtx.strokeStyle = ctx.strokeStyle = BOUNDARY_VERTEX_STROKE_COLOR;
+            svgCtx.lineWidth = ctx.lineWidth = BOUNDARY_VERTEX_STROKE_WIDTH;
             drawCircle(ctx, point, BOUNDARY_VERTEX_RADIUS);
+            drawCircle(svgCtx, point, BOUNDARY_VERTEX_RADIUS);
         }
     }
 }
 
 // draw the intersections of the voronoi points with the boundary
 for (let point of intersectPoints) {
-    ctx.fillStyle = BOUNDARY_INTERSECTION_FILL_COLOR;
-    ctx.strokeStyle = BOUNDARY_INTERSECTION_STROKE_COLOR;
-    ctx.lineWidth = BOUNDARY_INTERSECTION_STROKE_WIDTH;
+    svgCtx.fillStyle = ctx.fillStyle = BOUNDARY_INTERSECTION_FILL_COLOR;
+    svgCtx.strokeStyle = ctx.strokeStyle = BOUNDARY_INTERSECTION_STROKE_COLOR;
+    svgCtx.lineWidth = ctx.lineWidth = BOUNDARY_INTERSECTION_STROKE_WIDTH;
     drawCircle(ctx, point, BOUNDARY_INTERSECTION_RADIUS);
+    drawCircle(svgCtx, point, BOUNDARY_INTERSECTION_RADIUS);
 }
 
 var textBoxes = [];
@@ -357,19 +393,20 @@ textBoxes.push([SIZE_X-10,-100000,SIZE_X+10000,SIZE_Y+10000]);
 textBoxes.push([-10000,SIZE_Y-10,SIZE_X+10000,SIZE_Y+10000]);
 
 for (let i = 0; i < distanceCluster.length; i++) {
-    ctx.fillStyle = FOUND_NODE_FILL_COLOR;
-    ctx.strokeStyle = FOUND_NODE_STROKE_COLOR;
-    ctx.lineWidth = FOUND_NODE_STROKE_WIDTH;
+    svgCtx.fillStyle = ctx.fillStyle = FOUND_NODE_FILL_COLOR;
+    svgCtx.strokeStyle = ctx.strokeStyle = FOUND_NODE_STROKE_COLOR;
+    svgCtx.lineWidth = ctx.lineWidth = FOUND_NODE_STROKE_WIDTH;
     let data = distanceCluster[i][1];
     drawCircle(ctx, data.point, FOUND_NODE_RADIUS);
+    drawCircle(svgCtx, data.point, FOUND_NODE_RADIUS);
     console.log("Point from "+data.point[1]/HEIGHT_ADJUST+","+data.point[0]+" to "+data.destination[1]/HEIGHT_ADJUST+","+data.destination[0]+" is "+distanceCluster[i][0]/1000+"km");
 
-    ctx.font = FOUND_NODE_FONT;
-    ctx.fillStyle = FOUND_NODE_FONT_FILL_COLOR;
-    ctx.strokeStyle = FOUND_NODE_FONT_STROKE_COLOR;
-    ctx.lineWidth = FOUND_NODE_FONT_STROKE_WIDTH;
-    ctx.textBaseline = "top";
-    ctx.textAlign = "start";
+    svgCtx.font = ctx.font = FOUND_NODE_FONT;
+    svgCtx.fillStyle = ctx.fillStyle = FOUND_NODE_FONT_FILL_COLOR;
+    svgCtx.strokeStyle = ctx.strokeStyle = FOUND_NODE_FONT_STROKE_COLOR;
+    svgCtx.lineWidth = ctx.lineWidth = FOUND_NODE_FONT_STROKE_WIDTH;
+    svgCtx.textBaseline = ctx.textBaseline = "top";
+    svgCtx.textAlign = ctx.textAlign = "start";
 
     let textX = getX(data.point[0]) + FOUND_NODE_RADIUS;
     let textY = getY(data.point[1]) + FOUND_NODE_RADIUS;
@@ -402,20 +439,50 @@ for (let i = 0; i < distanceCluster.length; i++) {
     ctx.strokeText(text, textX, textY);
     ctx.fillText(text, textX, textY);
 
-    ctx.strokeStyle = FOUND_NODE_ARROW_STROKE_COLOR;
-    ctx.lineWidth = FOUND_NODE_ARROW_STROKE_WIDTH;
+    let positionY = textY;
+    for (let line of text.split("\n")) {
+        svgCtx.strokeText(line, textX, positionY);
+        svgCtx.fillText(line, textX, positionY);
+        positionY += FOUND_NODE_FONT_SIZE;
+    }
+
+    svgCtx.strokeStyle = ctx.strokeStyle = FOUND_NODE_ARROW_STROKE_COLOR;
+    svgCtx.lineWidth = ctx.lineWidth = FOUND_NODE_ARROW_STROKE_WIDTH;
+
     ctx.beginPath();
     ctx.moveTo(textX, textY + FOUND_NODE_TEXT_HEIGHT/2);
     ctx.lineTo(getX(data.point[0]), getY(data.point[1]));
     ctx.stroke();
 
+    svgCtx.beginPath();
+    svgCtx.moveTo(textX, textY + FOUND_NODE_TEXT_HEIGHT/2);
+    svgCtx.lineTo(getX(data.point[0]), getY(data.point[1]));
+    svgCtx.stroke();
+
     textBoxes.push([textX, textY, textX+textWidth, textY+FOUND_NODE_TEXT_HEIGHT]);
+
+    let feature = turf.point([data.point[0], data.point[1]/HEIGHT_ADJUST], {
+        "name":"Destination",
+        "marker-size":"large",
+        "marker-color": "#ffffff",
+        "marker-symbol":"cross",
+        "info": text,
+        "distance": distanceCluster[i][0]/1000,
+        "opposite-point": [data.destination[0], data.destination[1]/HEIGHT_ADJUST]
+    });
+    turfFeatures.push(feature);
 }
+
+let geoJSONData = turf.featureCollection(turfFeatures);
 
 console.log("Saving image");
 
 // save image to file
 var buf = canvas.toBuffer();
-fs.writeFileSync(OUTPUT_FILE_NAME, buf);
+fs.writeFileSync(OUTPUT_FILE_NAME + ".png", buf);
+
+fs.writeFileSync(OUTPUT_FILE_NAME + ".svg", svgCtx.getSerializedSvg().replace('xmlns:xlink="http://www.w3.org/1999/xlink"',""));
+
+fs.writeFileSync(OUTPUT_FILE_NAME + ".geojson", JSON.stringify(geoJSONData));
 
 console.log("Done");

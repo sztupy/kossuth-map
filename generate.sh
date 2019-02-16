@@ -17,5 +17,5 @@ convert images/scottish_distilleries.png -background white -alpha Remove -qualit
 rm images/scottish_distilleries.png
 
 #./generate_data.js configs/gb_pubs.json
-convert images/gb_pubs.png -background white -alpha Remove -quality 70 images/gb_pubs.jpg
-rm images/gb_pubs.png
+#convert images/gb_pubs.png -background white -alpha Remove -quality 70 images/gb_pubs.jpg
+#rm images/gb_pubs.png
