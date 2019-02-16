@@ -84,9 +84,15 @@ if (!global.XMLSerializer) {
     global.XMLSerializer = require("w3c-xmlserializer/lib/XMLSerializer").interface;
 }
 
-
 const points = JSON.parse(fs.readFileSync(INPUT_FILE_NAME));
 const boundary = JSON.parse(fs.readFileSync(BOUNDARY_FILE_NAME));
+
+var statisticsDump = {
+    boundingBox: [],
+    points: [],
+    destinations: [],
+    statistics: {}
+};
 
 // figure out the boundaries
 var minX = points[0][0];
@@ -111,6 +117,8 @@ for (let polygon of boundary) {
         }
     }
 }
+
+statisticsDump.boundingBox = [[minX, minY], [maxX, maxY]];
 
 // add some leeway around the edges
 let d = (maxX-minX)/50;
@@ -274,17 +282,20 @@ for (let point of potentialPoints) {
         point: point,
         destination: otherPoint
     }]);
+
+    statisticsDump.points.push([[p1.lon, p1.lat],[p2.lon, p2.lat],d/1000]);
 }
 
 // sort in order of decreasing distance
 distanceMap.sort((a,b) => b[0] - a[0]);
+statisticsDump.points.sort((a,b) => b[2] - a[2]);
 
 // cluster points - only keep one in each cluster
 console.log("Clustering points");
 var distanceCluster = [];
 var index = 0;
 
-while (distanceCluster.length < NUMBER_OF_CLUSTERS && index < distanceMap.length) {
+while (index < distanceMap.length) {
     let data = distanceMap[index];
     let minDist = Infinity;
     for (let i = 0; i < distanceCluster.length; i++) {
@@ -296,10 +307,38 @@ while (distanceCluster.length < NUMBER_OF_CLUSTERS && index < distanceMap.length
         }
     }
     if (minDist > CLUSTERING_MINIMUM_DISTANCE * 1000) {
-        distanceCluster.push(data);
+        if (distanceCluster.length < NUMBER_OF_CLUSTERS) {
+            distanceCluster.push(data);
+        }
+        statisticsDump.destinations.push({
+            from: [data[1].point[0], data[1].point[1]/HEIGHT_ADJUST],
+            to: [data[1].destination[0], data[1].destination[1]/HEIGHT_ADJUST],
+            distance: data[0] / 1000,
+            position: statisticsDump.destinations.length
+        });
     }
     index++;
 }
+
+function getMedian(sortedData, getData) {
+    let middle = Math.floor(sortedData.length / 2);
+    return (middle % 2 == 0) ? (getData(sortedData[middle - 1]) + getData(sortedData[middle])) / 2 : getData(sortedData[middle]);
+}
+
+// get some averages data
+statisticsDump.statistics.destAvg = 0;
+statisticsDump.destinations.forEach(data => {
+    statisticsDump.statistics.destAvg += data.distance
+});
+statisticsDump.statistics.destAvg /= statisticsDump.destinations.length;
+statisticsDump.statistics.destMedian = getMedian(statisticsDump.destinations, data => data.distance);
+
+statisticsDump.statistics.pointsAvg = 0;
+statisticsDump.points.forEach(data => {
+    statisticsDump.statistics.pointsAvg += data[2]
+});
+statisticsDump.statistics.pointsAvg /= statisticsDump.points.length;
+statisticsDump.statistics.pointsMedian = getMedian(statisticsDump.points, data => data[2]);
 
 console.log("Generating image");
 var turfFeatures = [];
@@ -508,5 +547,9 @@ fs.writeFileSync(OUTPUT_FILE_NAME + ".png", buf);
 fs.writeFileSync(OUTPUT_FILE_NAME + ".svg", svgCtx.getSerializedSvg().replace('xmlns:xlink="http://www.w3.org/1999/xlink"',""));
 
 fs.writeFileSync(OUTPUT_FILE_NAME + ".geojson", JSON.stringify(geoJSONData));
+
+fs.writeFileSync(OUTPUT_FILE_NAME + ".json", JSON.stringify(statisticsDump));
+
+console.log(statisticsDump.statistics);
 
 console.log("Done");

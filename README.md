@@ -49,6 +49,16 @@ Some useful config values you can change:
 
 You can also change the styling on the output by changing any of the other values, please consult the start of the  `generate_data.js` file about the available options.
 
+In the generated output you can find the following files:
+
+* `.png` and `.svg` depicting the Voronoi-graph, the potential points, and the top X clusters that were selected including details on where they are, and how far they are from the closest node.
+* `.geojson` showing all of the nodes, and the selected clusters along with some metadata. The bounday of the country is also included for reference.
+* `.json` additional file containing the following details:
+  * `boundingBox`: the bounding box of the country and the nodes
+  * `points`: the list of all potential points where there is a local maximum for distance - along with the distance itself, and where that point lies. The format is `[[pointLon,pointLat],[destinationLon,destinationLat],distanceInKm]`
+  * `destinations`: the list of all potential points filtered down by clustering points that are close to each other out. This will effectevily partition the country up into clusters that are cover similar areas
+  * `statistics`: this will contain some average and median calculations. The main thing to note here is the `destMedian`, as this will show the median value of the distances of the clusters. As the clusters will effectively cover similar areas, this means half of the country will be covered by half of the clusters, and the other half by the others. So the median distance would mean that you have a 50% chance to be in a cluster where no matter where you are you are closer to a node than the specified distance. In other words if someone drops you off randomly in the country it's likely you'll be at most this distance to the nearest node.
+
 Examples
 --------
 
@@ -57,6 +67,8 @@ Some examples:
 ### Points furthest away in Hungary from a street named "Kossuth"
 
 Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia where you'll be 17km away from one.
+
+On average, if you are in a random place in Hungary, it's likely you will be within 3km of a Kossuth street or square.
 
 Large resolution map:
 ![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth.jpg)
@@ -86,6 +98,8 @@ osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-h
 
 There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be just North-East of  Hortobágy National Park in the middle of nowhere, where the closest complex will be a mere 12km away.
 
+On average, if you are in a random place in Hungary, it's likely you will be within 3.5km of a Sports Complex.
+
 Large resolution map:
 ![Stadion large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok.jpg)
 
@@ -100,6 +114,8 @@ Also it's widely known that there are a lot of pubs in the UK. However there's n
 
 The best you can do is 13km in Wales, and 11.8km in England (excluding Lundi Isle where it's 26km).
 
+On average, if you are in a random place in Great Britain, it's likely you will be within 15km of a Distillery
+
 Large resolution map:
 ![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/gb_pubs.jpg)
 
@@ -108,6 +124,8 @@ Data source: https://www.getthedata.com/open-pubs
 ### Points furthest away in Scotland from a distillery
 
 The Isles are left out from distilleries unfortunately, especially Shetland, where Unst is 240km away from the nearest distillery. On the mainland... well you have to head towards England to get 102km away from Scotch.
+
+On average, if you are in a random place in Scotland, it's likely you will be within 7km of a Distillery
 
 Large resolution map:
 ![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/scottish_distilleries.jpg)

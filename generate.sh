@@ -1,21 +1,29 @@
 #!/usr/bin/env bash
 
-./generate_data.js configs/kossuth.json
-convert images/kossuth.png -background white -alpha Remove -quality 70 images/kossuth.jpg
-rm images/kossuth.png
+export NODE_OPTIONS="--max-old-space-size=8192"
 
-./generate_data.js configs/kossuth_small.json
+generate_details() {
+    ./generate_data.js "configs/$1.json"
+    convert "images/$1.png" -background white -alpha Remove -quality 70 "images/$1.jpg"
+    rm "images/$1.png"
+    gzip "images/$1.svg"
+    gzip "images/$1.json"
+}
 
-./generate_data.js configs/stadionok.json
-convert images/stadionok.png -background white -alpha Remove -quality 70 images/stadionok.jpg
-rm images/stadionok.png
+echo "Kossuth"
+generate_details "kossuth"
 
-./generate_data.js configs/stadionok_small.json
+echo "Kossuth Small"
+generate_details "kossuth_small"
 
-./generate_data.js configs/scottish_distilleries.json
-convert images/scottish_distilleries.png -background white -alpha Remove -quality 70 images/scottish_distilleries.jpg
-rm images/scottish_distilleries.png
+echo "Sport"
+generate_details "stadionok"
 
-#./generate_data.js configs/gb_pubs.json
-#convert images/gb_pubs.png -background white -alpha Remove -quality 70 images/gb_pubs.jpg
-#rm images/gb_pubs.png
+echo "Sport Small"
+generate_details "stadionok_small"
+
+echo "Distilleries"
+generate_details "scottish_distilleries"
+
+echo "Pubs"
+generate_details "gb_pubs"
