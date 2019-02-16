@@ -45,15 +45,15 @@ Some examples:
 
 ### Points furthest away in Hungary from a street named "Kossuth"
 
+Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia.
+
 Large resolution map:
 ![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/kossuth.png)
 
 Small resolution map:
 ![Kossuth small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/kossuth_small.png)
 
-The dataset is called `kossuth_points.json`:
-
-To generate `kossuth_points.json` use:
+The dataset is called `kossuth_points.json`. To generate the file I used the following scripts:
 
 1. Download Hungary.osm.pbf from http://data.osm-hr.org/hungary/
 
@@ -69,9 +69,11 @@ osmosis –read-pbf-fast hungary.osm.pbf file=“hungary.osm.pbf” –way-key k
 osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-headline | grep -i kossuth > streets.csv
 ```
 
-Finally I converted the CSV to JSON using some sed scripts.
+4. Finally I converted the CSV to JSON using vi manually.
 
-### Points furthest away in Hungary from any sports complex ==
+### Points furthest away in Hungary from any sports complex
+
+There's plenty of sports complex's in Hungary. To be the furthest from one, you have to be in the Hortobágy National Park.
 
 Large resolution map:
 ![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/stadionok.png)
