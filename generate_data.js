@@ -4,13 +4,14 @@ console.log('Preparing data');
 
 // configuration
 const INPUT_FILE_NAME = 'datasets/uk_pubs.json';
-const BOUNDARY_FILE_NAME = 'datasets/gb_mainland.json';
-const OUTPUT_FILE_NAME = 'images/uk_pubs.png';
+const BOUNDARY_FILE_NAME = 'datasets/scotland.json';
+const OUTPUT_FILE_NAME = 'images/pubs_scotland.png';
 
 const IMAGE_WIDTH = 10000; // px
 
-const NUMBER_OF_CLUSTERS = 40;
-const CLUSTERING_MINIMUM_DISTANCE = 100; //km
+const NUMBER_OF_CLUSTERS = 10;
+const CLUSTERING_MINIMUM_DISTANCE = 100; //in km
+const FAST_BORDER_PROCESSING = false; // turning it on will skip some edge cases on the country boundaries, but make computation on them faster
 
 const NODE_FILL_COLOR = "rgba(80,80,80, 0.25)";
 const NODE_STROKE_COLOR = "rgba(0,0,0, 0.5)";
@@ -63,7 +64,7 @@ const LatLon = require('geodesy').LatLonEllipsoidal;
 const points = JSON.parse(fs.readFileSync(INPUT_FILE_NAME));
 const boundary = JSON.parse(fs.readFileSync(BOUNDARY_FILE_NAME));
 
-const boundaryTurf = turf.polygon([boundary]);
+const boundaryTurf = turf.multiPolygon(boundary);
 
 const delaunay = Delaunay.from(points);
 
@@ -80,11 +81,15 @@ for (let p of points) {
     if (p[1] > maxY) { maxY = p[1]; }
 }
 
-for (let p of boundary) {
-    if (p[0] < minX) { minX = p[0]; }
-    if (p[0] > maxX) { maxX = p[0]; }
-    if (p[1] < minY) { minY = p[1]; }
-    if (p[1] > maxY) { maxY = p[1]; }
+for (let polygon of boundary) {
+    for (let subpolygon of polygon) {
+        for (let p of subpolygon) {
+            if (p[0] < minX) { minX = p[0]; }
+            if (p[0] > maxX) { maxX = p[0]; }
+            if (p[1] < minY) { minY = p[1]; }
+            if (p[1] > maxY) { maxY = p[1]; }
+        }
+    }
 }
 
 // add some leeway around the edges
@@ -175,7 +180,7 @@ var intersectPoints = [];
 // collects all points which intersect our boundary
 for (let poly of voronoi.cellPolygons()) {
     for (let i=0; i<poly.length; i++) {
-        if (locations.get(pointToKey(poly[i])) != locations.get(pointToKey(poly[(i + 1) % poly.length]))) {
+        if (!FAST_BORDER_PROCESSING || (locations.get(pointToKey(poly[i])) != locations.get(pointToKey(poly[(i + 1) % poly.length])))) {
             let lineTurf = turf.lineString([poly[i], poly[(i + 1) % poly.length]]);
             let intersects = turf.lineIntersect(lineTurf, boundaryTurf);
             turf.featureEach(intersects, (currentFeature, _) => {
@@ -198,8 +203,12 @@ for (let [key, value] of locations) {
 }
 
 // draw the vertices on the boundary
-for (let point of boundary) {
-    potentialPoints.push(point);
+for (let polygon of boundary) {
+    for (let subpolygon of polygon) {
+        for (let point of subpolygon) {
+            potentialPoints.push(point);
+        }
+    }
 }
 
 for (let point of intersectPoints) {
@@ -266,7 +275,11 @@ for (let poly of voronoi.cellPolygons()) {
 // draw the boundary
 ctx.strokeStyle = BOUNDARY_STROKE_COLOR;
 ctx.lineWidth = BOUNDARY_STROKE_WIDTH;
-drawPoly(ctx, boundary);
+for (let polygon of boundary) {
+    for (let subpolygon of polygon) {
+            drawPoly(ctx, subpolygon);
+    }
+}
 
 // draw the points from the voronoi dataset
 for (let [key, value] of locations) {
@@ -278,11 +291,15 @@ for (let [key, value] of locations) {
 }
 
 // draw the vertices on the boundary
-for (let point of boundary) {
-    ctx.fillStyle = BOUNDARY_VERTEX_FILL_COLOR;
-    ctx.strokeStyle = BOUNDARY_VERTEX_STROKE_COLOR;
-    ctx.lineWidth = BOUNDARY_VERTEX_STROKE_WIDTH;
-    drawCircle(ctx, point, BOUNDARY_VERTEX_RADIUS);
+for (let polygon of boundary) {
+    for (let subpolygon of polygon) {
+        for (let point of subpolygon) {
+            ctx.fillStyle = BOUNDARY_VERTEX_FILL_COLOR;
+            ctx.strokeStyle = BOUNDARY_VERTEX_STROKE_COLOR;
+            ctx.lineWidth = BOUNDARY_VERTEX_STROKE_WIDTH;
+            drawCircle(ctx, point, BOUNDARY_VERTEX_RADIUS);
+        }
+    }
 }
 
 // draw the intersections of the voronoi points with the boundary
