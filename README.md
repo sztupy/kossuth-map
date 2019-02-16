@@ -52,7 +52,7 @@ Some examples:
 Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia where you'll be 22.30km away from one.
 
 Large resolution map:
-![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth.png)
+![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth.jpg)
 
 Small resolution map:
 ![Kossuth small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth_small.png)
@@ -80,7 +80,7 @@ osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-h
 There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be in the centre of Hortobágy National Park, where the closest complex will be 15.25km away.
 
 Large resolution map:
-![Stadion large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok.png)
+![Stadion large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok.jpg)
 
 Small resolution map:
 ![Stadion small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok_small.png)
@@ -92,7 +92,7 @@ The dataset is from a list I gathered for another project called Magyar Stadiono
 Also it's widely known that there are a lot of pubs in the UK. However there's not that many of them in the Highlands, you can be 94km from one if you go to the right spot. The best you can do is 18km in Wales, and 12.5km in England.
 
 Large resolution map:
-![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/gb_pubs.png)
+![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/gb_pubs.jpg)
 
 Data source: https://www.getthedata.com/open-pubs
 
@@ -101,6 +101,6 @@ Data source: https://www.getthedata.com/open-pubs
 The Isles are left out from distilleries, and on the Mainland you actually have to head to England to get far away from some Scotch.
 
 Large resolution map:
-![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/scottish_distilleries.png)
+![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/scottish_distilleries.jpg)
 
 Dataset is from here: http://adn.biol.umontreal.ca/~numericalecology/data/scotch.html

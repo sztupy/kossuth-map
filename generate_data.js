@@ -3,9 +3,9 @@
 console.log('Preparing data');
 
 // configuration
-const INPUT_FILE_NAME = 'datasets/distilleries.json';
-const BOUNDARY_FILE_NAME = 'boundaries/scotland.json';
-const OUTPUT_FILE_NAME = 'images/scottish_distilleries.png';
+const INPUT_FILE_NAME = 'datasets/gb_pubs.json';
+const BOUNDARY_FILE_NAME = 'boundaries/great_britain.json';
+const OUTPUT_FILE_NAME = 'images/gb_pubs.png';
 
 const IMAGE_WIDTH = 10000; // px
 
@@ -101,7 +101,7 @@ d = (maxY-minY)/50;
 minY -= d; maxY += d;
 
 // skew the height values based on the latitude to make it more conformal
-const HEIGHT_ADJUST = AUTO_ADJUST_COORDINATE_MAPPING ? 1 / Math.abs(Math.cos(Math.PI / 180 * minY+((maxY-minY)/2))) : 1;
+const HEIGHT_ADJUST = AUTO_ADJUST_COORDINATE_MAPPING ? 1 / Math.abs(Math.cos(Math.PI / 180 * (minY+((maxY-minY)/2)))) : 1;
 
 if (AUTO_ADJUST_COORDINATE_MAPPING) {
     minY *= HEIGHT_ADJUST;
