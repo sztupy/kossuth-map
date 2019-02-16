@@ -1,68 +1,80 @@
 #!/usr/bin/env node
 
+const fs = require('fs');
+const process = require('process');
+
+const args = process.argv;
+if (args.length != 3) {
+    console.log("Usage: generate_data.js <config_file_name>");
+    process.exit(1);
+}
+
 console.log('Preparing data');
 
+const config = JSON.parse(fs.readFileSync(args[2]));
+
 // configuration
-const INPUT_FILE_NAME = 'datasets/gb_pubs.json';
-const BOUNDARY_FILE_NAME = 'boundaries/great_britain.json';
-const OUTPUT_FILE_NAME = 'images/gb_pubs.png';
+const INPUT_FILE_NAME = config.INPUT_FILE_NAME || process.exit(2);
+const BOUNDARY_FILE_NAME = config.BOUNDARY_FILE_NAME || process.exit(2);
+const OUTPUT_FILE_NAME = config.OUTPUT_FILE_NAME || process.exit(2);
 
-const IMAGE_WIDTH = 10000; // px
+const IMAGE_WIDTH = config.IMAGE_WIDTH || process.exit(2); // px
 
-const NUMBER_OF_CLUSTERS = 40;
-const CLUSTERING_MINIMUM_DISTANCE = 100; //in km
-const BORDER_PROCESSING_MODE = 1;
+const NUMBER_OF_CLUSTERS = config.NUMBER_OF_CLUSTERS || process.exit(2);
+const CLUSTERING_MINIMUM_DISTANCE = config.CLUSTERING_MINIMUM_DISTANCE || process.exit(2); //in km
+const BORDER_PROCESSING_MODE = config.BORDER_PROCESSING_MODE || 1;
 // 0: slowest; gives best results on concave countries with lots of islands
 // 1: middle ground; gives okay results for countries with lots of islands, but can skip some border points in concave countries
 // 2: fastest; works okay for single polygon, convex countries with no islands
-const AUTO_ADJUST_COORDINATE_MAPPING = true;
+const AUTO_ADJUST_COORDINATE_MAPPING = config.AUTO_ADJUST_COORDINATE_MAPPING || true;
 // when true it will adjust the height of the image based on the median latitude as well - but keep a simple equirectangular projection
 // When turned off will use plain plate carrée projection
 
-const NODE_FILL_COLOR = "rgba(80,80,80, 0.25)";
-const NODE_STROKE_COLOR = "rgba(0,0,0, 0.5)";
-const NODE_STROKE_WIDTH = 0.5;
-const NODE_RADIUS = IMAGE_WIDTH / 500;
+const NODE_FILL_COLOR = config.NODE_FILL_COLOR || "rgba(80,80,80, 0.25)";
+const NODE_STROKE_COLOR = config.NODE_STROKE_COLOR || "rgba(0,0,0, 0.5)";
+const NODE_STROKE_WIDTH = config.NODE_STROKE_WIDTH || 0.5;
+const NODE_RADIUS = config.NODE_RADIUS || IMAGE_WIDTH / 500;
 
-const VORONOI_CELL_STROKE_COLOR = "#333333";
-const VORONOI_CELL_STROKE_WIDTH = 0.5;
+const VORONOI_CELL_STROKE_COLOR = config.VORONOI_CELL_STROKE_COLOR || "#333333";
+const VORONOI_CELL_STROKE_WIDTH = config.VORONOI_CELL_STROKE_WIDTH || 0.5;
 
-const BOUNDARY_STROKE_COLOR = "#000000";
-const BOUNDARY_STROKE_WIDTH = IMAGE_WIDTH / 2000;
+const BOUNDARY_STROKE_COLOR = config.BOUNDARY_STROKE_COLOR || "#000000";
+const BOUNDARY_STROKE_WIDTH = config.BOUNDARY_STROKE_WIDTH || IMAGE_WIDTH / 2000;
 
-const VORONOI_NODE_ACTIVE_FILL_COLOR = "#FF5555";
-const VORONOI_NODE_INACTIVE_FILL_COLOR = "#555555";
-const VORONOI_NODE_ACTIVE_STROKE_COLOR = "#FF0000";
-const VORONOI_NODE_INACTIVE_STROKE_COLOR = "#000000";
-const VORONOI_NODE_STROKE_WIDTH = 0.5;
-const VORONOI_NODE_RADIUS = IMAGE_WIDTH / 2000;
+const VORONOI_NODE_ACTIVE_FILL_COLOR = config.VORONOI_NODE_ACTIVE_FILL_COLOR || "#FF5555";
+const VORONOI_NODE_INACTIVE_FILL_COLOR = config.VORONOI_NODE_INACTIVE_FILL_COLOR || "#555555";
+const VORONOI_NODE_ACTIVE_STROKE_COLOR = config.VORONOI_NODE_ACTIVE_STROKE_COLOR || "#FF0000";
+const VORONOI_NODE_INACTIVE_STROKE_COLOR = config.VORONOI_NODE_INACTIVE_STROKE_COLOR || "#000000";
+const VORONOI_NODE_STROKE_WIDTH = config.VORONOI_NODE_STROKE_WIDTH || 0.5;
+const VORONOI_NODE_RADIUS = config.VORONOI_NODE_RADIUS || IMAGE_WIDTH / 2000;
 
-const BOUNDARY_VERTEX_FILL_COLOR = "#55FF55";
-const BOUNDARY_VERTEX_STROKE_COLOR = "#00FF00";
-const BOUNDARY_VERTEX_STROKE_WIDTH = 0.5;
-const BOUNDARY_VERTEX_RADIUS = IMAGE_WIDTH / 2000;
+const BOUNDARY_VERTEX_FILL_COLOR = config.BOUNDARY_VERTEX_FILL_COLOR || "#55FF55";
+const BOUNDARY_VERTEX_STROKE_COLOR = config.BOUNDARY_VERTEX_STROKE_COLOR || "#00FF00";
+const BOUNDARY_VERTEX_STROKE_WIDTH = config.BOUNDARY_VERTEX_STROKE_WIDTH || 0.5;
+const BOUNDARY_VERTEX_RADIUS = config.BOUNDARY_VERTEX_RADIUS || IMAGE_WIDTH / 2000;
 
-const BOUNDARY_INTERSECTION_FILL_COLOR = "#99FF99";
-const BOUNDARY_INTERSECTION_STROKE_COLOR = "#00FF00";
-const BOUNDARY_INTERSECTION_STROKE_WIDTH = 0.5;
-const BOUNDARY_INTERSECTION_RADIUS = IMAGE_WIDTH / 2000;
+const BOUNDARY_INTERSECTION_FILL_COLOR = config.BOUNDARY_INTERSECTION_FILL_COLOR || "#99FF99";
+const BOUNDARY_INTERSECTION_STROKE_COLOR = config.BOUNDARY_INTERSECTION_STROKE_COLOR || "#00FF00";
+const BOUNDARY_INTERSECTION_STROKE_WIDTH = config.BOUNDARY_INTERSECTION_STROKE_WIDTH || 0.5;
+const BOUNDARY_INTERSECTION_RADIUS = config.BOUNDARY_INTERSECTION_RADIUS || IMAGE_WIDTH / 2000;
 
-const FOUND_NODE_FILL_COLOR = "rgba(255,0,0,0.1)";
-const FOUND_NODE_STROKE_COLOR = "rgba(255,0,0,0.5)";
-const FOUND_NODE_ARROW_STROKE_COLOR = "rgba(0,0,0,0.5)";
-const FOUND_NODE_ARROW_STROKE_WIDTH = 6;
-const FOUND_NODE_STROKE_WIDTH = 3;
-const FOUND_NODE_RADIUS = IMAGE_WIDTH / 100;
+const FOUND_NODE_FILL_COLOR = config.FOUND_NODE_FILL_COLOR || "rgba(255,0,0,0.1)";
+const FOUND_NODE_STROKE_COLOR = config.FOUND_NODE_STROKE_COLOR || "rgba(255,0,0,0.5)";
+const FOUND_NODE_ARROW_STROKE_COLOR = config.FOUND_NODE_ARROW_STROKE_COLOR || "rgba(0,0,0,0.5)";
+const FOUND_NODE_ARROW_STROKE_WIDTH = config.FOUND_NODE_ARROW_STROKE_WIDTH || 6;
+const FOUND_NODE_STROKE_WIDTH = config.FOUND_NODE_STROKE_WIDTH || 3;
+const FOUND_NODE_RADIUS = config.FOUND_NODE_RADIUS || IMAGE_WIDTH / 100;
 
-const FOUND_NODE_FONT = "60px Arial";
-const FOUND_NODE_FONT_FILL_COLOR = "#000000";
-const FOUND_NODE_FONT_STROKE_COLOR = "#FFFFFF";
-const FOUND_NODE_FONT_STROKE_WIDTH = 10;
-const FOUND_NODE_TEXT_HEIGHT = 200; // No way to get this automated using HTML5 Canvas
+var fontSize = Math.max(15,Math.round(IMAGE_WIDTH/150));
+const FOUND_NODE_FONT = config.FOUND_NODE_FONT || fontSize + "px Arial";
+const FOUND_NODE_FONT_FILL_COLOR = config.FOUND_NODE_FONT_FILL_COLOR || "#000000";
+const FOUND_NODE_FONT_STROKE_COLOR = config.FOUND_NODE_FONT_STROKE_COLOR || "#FFFFFF";
+const FOUND_NODE_FONT_STROKE_WIDTH = config.FOUND_NODE_FONT_STROKE_WIDTH || fontSize/6;
+const FOUND_NODE_TEXT_HEIGHT = config.FOUND_NODE_TEXT_HEIGHT || fontSize*3.2;
+// No way to get this automated using HTML5 Canvas
 
 //requires
 const { Delaunay } = require('d3-delaunay');
-const fs = require('fs');
 const { createCanvas } = require('canvas');
 const turf = require('@turf/turf');
 const LatLon = require('geodesy').LatLonEllipsoidal;
@@ -248,8 +260,8 @@ console.log("Obtaining distance data");
 var distanceMap = [];
 for (let point of potentialPoints) {
     let otherPoint = points[delaunay.find(point[0],point[1])];
-    let p1 = new LatLon(point[0], point[1]/HEIGHT_ADJUST);
-    let p2 = new LatLon(otherPoint[0], otherPoint[1]/HEIGHT_ADJUST);
+    let p1 = new LatLon(point[1]/HEIGHT_ADJUST, point[0]);
+    let p2 = new LatLon(otherPoint[1]/HEIGHT_ADJUST, otherPoint[0]);
     let d = p1.distanceTo(p2);
     distanceMap.push([d, {
         point: point,
@@ -269,8 +281,8 @@ while (distanceCluster.length < NUMBER_OF_CLUSTERS && index < distanceMap.length
     let data = distanceMap[index];
     let minDist = Infinity;
     for (let i = 0; i < distanceCluster.length; i++) {
-        let p1 = new LatLon(data[1].point[0], data[1].point[1]/HEIGHT_ADJUST);
-        let p2 = new LatLon(distanceCluster[i][1].point[0], distanceCluster[i][1].point[1]/HEIGHT_ADJUST);
+        let p1 = new LatLon(data[1].point[1]/HEIGHT_ADJUST, data[1].point[0]);
+        let p2 = new LatLon(distanceCluster[i][1].point[1]/HEIGHT_ADJUST, distanceCluster[i][1].point[0]);
         let d = p1.distanceTo(p2);
         if (d < minDist) {
             minDist = d;

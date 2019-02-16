@@ -1,0 +1,8 @@
+{
+    "INPUT_FILE_NAME": "datasets/gb_pubs.json",
+    "BOUNDARY_FILE_NAME": "boundaries/great_britain.json",
+    "OUTPUT_FILE_NAME": "images/gb_pubs.png",
+    "CLUSTERING_MINIMUM_DISTANCE": 50,
+    "NUMBER_OF_CLUSTERS": 60,
+    "IMAGE_WIDTH": 10000
+}

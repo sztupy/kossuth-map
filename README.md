@@ -27,9 +27,16 @@ Usage
 
 The app requires Node.JS to be installed, and the proper modules downloaded using `npm install`.
 
-Once the setup is done change the constants at the start of `generate_data.js` to match the input and output filenames, then simply run `./generate_data.js`
+Once the setup is done create a new config file (or use any existing one).
+You can check any of the examples inside the `configs` directory for templates.
 
-Some useful config values to change:
+Once you have the config simply run:
+
+```
+./generate_data.js <config_filename>
+```
+
+Some useful config values you can change:
 
 * `INPUT_FILE_NAME`: The input file containing the set of points we wish to avoid. It's a JSON array of `[lon,lat]` pairs preferably in WGS84.
 * `BOUNDARY_FILE_NAME`: The file containig the boundary of the country in geoJSON multi-polygon format. For fast results only run it one land, but the script should work fine with datasets containing islands as well.
@@ -40,7 +47,7 @@ Some useful config values to change:
 * `BORDER_PROCESSING_MODE`: Determines what kind of intersections between the Voronoi-edges and the border should be checked. 0 is the slowest but most complete, 1 is a middle ground, which should work for most cases, but might skip some points around concave features and islands, and 2 is a fast solution that only gives satisfactory results on single-polygon, convex countries.
 * `AUTO_ADJUST_COORDINATE_MAPPING`: Sets whether to use plain plate carrée projection, or try to compesate is based on the median latitude for a nicer image. Should be turned off if the median latitude is too far off the North or South, or not in the `[-90..90]` range.
 
-You can also change the styling on the output by changing any of the other values
+You can also change the styling on the output by changing any of the other values, please consult the start of the  `generate_data.js` file about the available options.
 
 Examples
 --------
@@ -49,7 +56,7 @@ Some examples:
 
 ### Points furthest away in Hungary from a street named "Kossuth"
 
-Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia where you'll be 22.30km away from one.
+Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia where you'll be 17km away from one.
 
 Large resolution map:
 ![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth.jpg)
@@ -77,7 +84,7 @@ osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-h
 
 ### Points furthest away in Hungary from any sports complex
 
-There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be in the centre of Hortobágy National Park, where the closest complex will be 15.25km away.
+There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be just North-East of  Hortobágy National Park in the middle of nowhere, where the closest complex will be a mere 12km away.
 
 Large resolution map:
 ![Stadion large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok.jpg)
@@ -89,7 +96,9 @@ The dataset is from a list I gathered for another project called Magyar Stadiono
 
 ### Points furthest away in Great Britain from a pub
 
-Also it's widely known that there are a lot of pubs in the UK. However there's not that many of them in the Highlands, you can be 94km from one if you go to the right spot. The best you can do is 18km in Wales, and 12.5km in England.
+Also it's widely known that there are a lot of pubs in the UK. However there's not that many of them in the Highlands, you can actually be 72km from one if you go to the right spot (or, if you include Hirta Isle the distance is 80km).
+
+The best you can do is 13km in Wales, and 11.8km in England (excluding Lundi Isle where it's 26km).
 
 Large resolution map:
 ![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/gb_pubs.jpg)
@@ -98,7 +107,7 @@ Data source: https://www.getthedata.com/open-pubs
 
 ### Points furthest away in Scotland from a distillery
 
-The Isles are left out from distilleries, and on the Mainland you actually have to head to England to get far away from some Scotch.
+The Isles are left out from distilleries unfortunately, especially Shetland, where Unst is 240km away from the nearest distillery. On the mainland... well you have to head towards England to get 102km away from Scotch.
 
 Large resolution map:
 ![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/scottish_distilleries.jpg)

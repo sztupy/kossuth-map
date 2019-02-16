@@ -1,0 +1,8 @@
+{
+    "INPUT_FILE_NAME": "datasets/stadionok.json",
+    "BOUNDARY_FILE_NAME": "boundaries/hungary.json",
+    "OUTPUT_FILE_NAME": "images/stadionok.png",
+    "CLUSTERING_MINIMUM_DISTANCE": 15,
+    "NUMBER_OF_CLUSTERS": 40,
+    "IMAGE_WIDTH": 10000
+}
