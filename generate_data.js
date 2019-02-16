@@ -466,9 +466,9 @@ for (let i = 0; i < distanceCluster.length; i++) {
 
     let symbol = (i+1)+'';
     if (i>8) {
-        symbol = String.fromCharCode(i + 97 - 10)
+        symbol = String.fromCharCode(i + 97 - 9)
     }
-    if (i>35) {
+    if (i>34) {
         symbol = 'cross';
     }
 
@@ -476,7 +476,7 @@ for (let i = 0; i < distanceCluster.length; i++) {
         turf.point([data.point[0], data.point[1]/HEIGHT_ADJUST], {
             "name": "Destination",
             "marker-size": "large",
-            "marker-color": "#00ff00",
+            "marker-color": "#009900",
             "marker-symbol": symbol,
             "info": text,
             "distance": distanceCluster[i][0]/1000,
@@ -489,7 +489,7 @@ for (let i = 0; i < distanceCluster.length; i++) {
         turf.lineString([[data.point[0], data.point[1]/HEIGHT_ADJUST], [data.destination[0], data.destination[1]/HEIGHT_ADJUST]],
         {
             "name": "Distance",
-            "stroke": "#33ff33",
+            "stroke": "#992222",
             "stroke-width": 2.5,
             "distance": distanceCluster[i][0]/1000,
             "position": i+1
