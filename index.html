@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Furthest points in a country map</title>
+</head>
+
+<body>
+    <h1>Determine furthest points away in a country for a specific set of points</h1>
+    <p>Based on a set of locations (nodes) these scripts will try to figure out which points are the furthest away from
+        these locations in a country.</p>
+    <p>It uses the following algorithm:</p>
+    <p>First it tries to find locations, which are potentially far away from our input set:</p>
+    <ol>
+        <li>It generates the Voronoi-graph based on the input set of locations</li>
+        <li>It checks each of the generated vertices whether they are within the country's boundaries or not. Any point
+            that's in the boundary gets added to the potential list of candidates</li>
+        <li>Each of the vertices of the boundary are also added to the potential candidates list</li>
+        <li>Finally any point on the boundary that is bisected by a Voronoi-edge is also added to the candidate list
+        </li>
+    </ol>
+    <p>The vertices of the Voronoi-graph are good candidates as they are the furthest point away from their neighbouring
+        locations. However some of these points can be outside of the country's boundaries. To make sure they are also
+        accounted for both the vertices in the country's boundaries are added to the list, as well as any place where
+        the boundary was intersected by a voroni-edge. These are the points where distances are at a local maximum, so
+        it's worth checking.</p>
+    <p>Once we have a set of potential locations, we simply go through them, find the nearest node to them, and check
+        it's distance. Then we sort these nodes according to how large it's distance is.</p>
+    <p>To make the result not too clustered, we also remove points that are too close together at the end. This makes
+        sure that remote border locations, which have a large amount of points in the search set will not be
+        over-represented in the result, as we are interested in more distinct locations anyway.</p>
+    <p>Once we have the end values we render them to a map as well.</p>
+    <p>Note: the voronoi diagram is calculated using a metric on a plate carrée projection of longitude and latitude
+        values, with an optional adjustment based on median latitude. For countries that span a large latitude range
+        this might not be exact enough on the top and bottom part of the image, and might skew which points should be
+        considered and which not. However distance calculations afterwards are done using great circle distances, so
+        they should be accurate.</p>
+    <h2>Download and usage</h2>
+    <p>Please see <a href="https://github.com/sztupy/kossuth-map">https://github.com/sztupy/kossuth-map</a> for more
+        details</p>
+    <h2>Examples</h2>
+    <h3>Points furthest away in Hungary from a street named "Kossuth"</h3>
+    <p>Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away
+        from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia where
+        you'll be 17km away from one.</p>
+    <p>On average, if you are in a random place in Hungary, it's likely you will be within 3km of a Kossuth street or
+        square.</p>
+    <p>Large resolution map:</p>
+    <p><a target="_blank" rel="noopener noreferrer"
+            href="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/kossuth.jpg"><img
+                src="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/kossuth.jpg"
+                alt="Kossuth large" style="max-width:100%;"></a></p>
+    <p>Interactive map:</p>
+    <p>
+        <script src="https://embed.github.com/view/geojson/sztupy/kossuth-map/gh-pages/images/kossuth.geojson"></script>
+    </p>
+    <h3>Points furthest away in Hungary from any sports complex</h3>
+    <p>There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be just North-East of
+        Hortobágy National Park in the middle of nowhere, where the closest complex will be a mere 12km away.</p>
+    <p>On average, if you are in a random place in Hungary, it's likely you will be within 3.5km of a Sports Complex.
+    </p>
+    <p>Large resolution map:</p>
+    <p><a target="_blank" rel="noopener noreferrer"
+            href="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/stadionok.jpg"><img
+                src="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/stadionok.jpg"
+                alt="Stadion large" style="max-width:100%;"></a></p>
+    <p>Interactive map:</p>
+    <p>
+        <script
+            src="https://embed.github.com/view/geojson/sztupy/kossuth-map/gh-pages/images/stadionok.geojson"></script>
+    </p>
+    <p>The dataset is from a list I gathered for another project called Magyar Stadionok: <a
+            href="https://github.com/sztupy/magyar-stadionok">https://github.com/sztupy/magyar-stadionok</a></p>
+    <h3>Points furthest away in Great Britain from a pub</h3>
+    <p>Also it's widely known that there are a lot of pubs in the UK. However there's not that many of them in the
+        Highlands, you can actually be 72km from one if you go to the right spot (or, if you include Hirta Isle the
+        distance is 80km).</p>
+    <p>The best you can do is 13km in Wales, and 11.8km in England (excluding Lundi Isle where it's 26km).</p>
+    <p>On average, if you are in a random place in Great Britain, it's likely you will be within one km of a pub</p>
+    <p>Large resolution map:</p>
+    <p><a target="_blank" rel="noopener noreferrer"
+            href="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/gb_pubs.jpg"><img
+                src="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/gb_pubs.jpg" alt="GB Pubs"
+                style="max-width:100%;"></a></p>
+    <p>
+        <script src="https://embed.github.com/view/geojson/sztupy/kossuth-map/gh-pages/images/gb_pubs.geojson"></script>
+    </p>
+    <h3>Points furthest away in Scotland from a distillery</h3>
+    <p>The Isles are left out from distilleries unfortunately, especially Shetland, where Unst is 240km away from the
+        nearest distillery. On the mainland... well you have to head towards England to get 102km away from Scotch.</p>
+    <p>On average, if you are in a random place in Scotland, it's likely you will be within 15km of a Distillery</p>
+    <p>Large resolution map:</p>
+    <p><a target="_blank" rel="noopener noreferrer"
+            href="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/scottish_distilleries.jpg"><img
+                src="https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/scottish_distilleries.jpg"
+                alt="Scottish distilleries" style="max-width:100%;"></a></p>
+    <p>
+        <script
+            src="https://embed.github.com/view/geojson/sztupy/kossuth-map/gh-pages/images/scottish_distilleries.geojson"></script>
+    </p>
+</body>
+
+</html>

@@ -71,10 +71,10 @@ Almost all settlements in Hungary have a street or square named "Kossuth". If yo
 On average, if you are in a random place in Hungary, it's likely you will be within 3km of a Kossuth street or square.
 
 Large resolution map:
-![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth.jpg)
+![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/kossuth.jpg)
 
 Small resolution map:
-![Kossuth small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth_small.png)
+![Kossuth small](https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/kossuth_small.jpg)
 
 The dataset is called `kossuth_points.json`. To generate the file I used the following scripts:
 
@@ -101,10 +101,10 @@ There's plenty of sports complexes in Hungary. To be the furthest from one, you 
 On average, if you are in a random place in Hungary, it's likely you will be within 3.5km of a Sports Complex.
 
 Large resolution map:
-![Stadion large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok.jpg)
+![Stadion large](https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/stadionok.jpg)
 
 Small resolution map:
-![Stadion small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok_small.png)
+![Stadion small](https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/stadionok_small.jpg)
 
 The dataset is from a list I gathered for another project called Magyar Stadionok: https://github.com/sztupy/magyar-stadionok
 
@@ -114,10 +114,10 @@ Also it's widely known that there are a lot of pubs in the UK. However there's n
 
 The best you can do is 13km in Wales, and 11.8km in England (excluding Lundi Isle where it's 26km).
 
-On average, if you are in a random place in Great Britain, it's likely you will be within 0.5km of a pub
+On average, if you are in a random place in Great Britain, it's likely you will be within one km of a pub
 
 Large resolution map:
-![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/gb_pubs.jpg)
+![GB Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/gb_pubs.jpg)
 
 Data source: https://www.getthedata.com/open-pubs
 
@@ -128,6 +128,6 @@ The Isles are left out from distilleries unfortunately, especially Shetland, whe
 On average, if you are in a random place in Scotland, it's likely you will be within 15km of a Distillery
 
 Large resolution map:
-![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/scottish_distilleries.jpg)
+![Scottish distilleries](https://raw.githubusercontent.com/sztupy/kossuth-map/gh-pages/images/scottish_distilleries.jpg)
 
 Dataset is from here: http://adn.biol.umontreal.ca/~numericalecology/data/scotch.html
