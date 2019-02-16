@@ -45,7 +45,7 @@ Some examples:
 
 ### Points furthest away in Hungary from a street named "Kossuth"
 
-Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia.
+Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia where you'll be 22.30km away from one.
 
 Large resolution map:
 ![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/kossuth.png)
@@ -73,7 +73,7 @@ osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-h
 
 ### Points furthest away in Hungary from any sports complex
 
-There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be in the Hortobágy National Park.
+There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be in the centre of Hortobágy National Park, where the closest complex will be 15.25km away.
 
 Large resolution map:
 ![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/stadionok.png)
