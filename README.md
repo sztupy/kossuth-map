@@ -48,10 +48,10 @@ Some examples:
 Almost all settlements in Hungary have a street or square named "Kossuth". If you wish to be the furthest away from any of them, the best place is around the tripoint border between Hungary, Austria and Slovenia where you'll be 22.30km away from one.
 
 Large resolution map:
-![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/kossuth.png)
+![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth.png)
 
 Small resolution map:
-![Kossuth small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/kossuth_small.png)
+![Kossuth small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/kossuth_small.png)
 
 The dataset is called `kossuth_points.json`. To generate the file I used the following scripts:
 
@@ -76,9 +76,18 @@ osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-h
 There's plenty of sports complexes in Hungary. To be the furthest from one, you have to be in the centre of Hortobágy National Park, where the closest complex will be 15.25km away.
 
 Large resolution map:
-![Kossuth large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/stadionok.png)
+![Stadion large](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok.png)
 
 Small resolution map:
-![Kossuth small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/stadionok_small.png)
+![Stadion small](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/stadionok_small.png)
 
 The dataset is from a list I gathered for another project called Magyar Stadionok: https://github.com/sztupy/magyar-stadionok
+
+### Points furthest away in Mainlang Great Britain from a Pub
+
+Also it's widely known that there are a lot of pubs in the UK. However there's not that many of them in the Highlands, you can be 94km from one if you go to the right spot. The best you can do is 18km in Wales, and 12.5km in England.
+
+Large resolution map:
+![UK Pubs](https://raw.githubusercontent.com/sztupy/kossuth-map/master/images/uk_pubs.png)
+
+Data source: https://www.getthedata.com/open-pubs

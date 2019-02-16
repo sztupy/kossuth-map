@@ -3,14 +3,14 @@
 console.log('Preparing data');
 
 // configuration
-const INPUT_FILE_NAME = 'kossuth_points.json';
-const BOUNDARY_FILE_NAME = 'hungary.json';
-const OUTPUT_FILE_NAME = 'kossuth.png';
+const INPUT_FILE_NAME = 'datasets/uk_pubs.json';
+const BOUNDARY_FILE_NAME = 'datasets/gb_mainland.json';
+const OUTPUT_FILE_NAME = 'images/uk_pubs.png';
 
 const IMAGE_WIDTH = 10000; // px
 
-const NUMBER_OF_CLUSTERS = 10;
-const CLUSTERING_MINIMUM_DISTANCE = 15; //km
+const NUMBER_OF_CLUSTERS = 40;
+const CLUSTERING_MINIMUM_DISTANCE = 100; //km
 
 const NODE_FILL_COLOR = "rgba(80,80,80, 0.25)";
 const NODE_STROKE_COLOR = "rgba(0,0,0, 0.5)";
@@ -229,7 +229,7 @@ console.log("Clustering points");
 var distanceCluster = [];
 var index = 0;
 
-while (distanceCluster.length<NUMBER_OF_CLUSTERS || index > distanceMap.length) {
+while (distanceCluster.length < NUMBER_OF_CLUSTERS && index < distanceMap.length) {
     let data = distanceMap[index];
     let minDist = Infinity;
     for (let i = 0; i < distanceCluster.length; i++) {
