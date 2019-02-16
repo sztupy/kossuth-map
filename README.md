@@ -20,6 +20,8 @@ To make the result not too clustered, we also remove points that are too close t
 
 Once we have the end values we render them to a map as well.
 
+Note: the voronoi diagram is calculated using a metric on a plate carrée projection of longitude and latitude values, with an optional adjustment based on median latitude. For countries that span a large latitude range this might not be exact enough on the top and bottom part of the image, and might skew which points should be considered and which not. However distance calculations afterwards are done using great circle distances, so they should be accurate.
+
 Usage
 -----
 
@@ -36,6 +38,7 @@ Some useful config values to change:
 * `NUMBER_OF_CLUSTERS`: The amount of points we wish to obtain at the end.
 * `CLUSTERING_MINUMUM_DISTANCE`: Sets how far away two points need to be (in km) in order to be considered for inclusion.
 * `BORDER_PROCESSING_MODE`: Determines what kind of intersections between the Voronoi-edges and the border should be checked. 0 is the slowest but most complete, 1 is a middle ground, which should work for most cases, but might skip some points around concave features and islands, and 2 is a fast solution that only gives satisfactory results on single-polygon, convex countries.
+* `AUTO_ADJUST_COORDINATE_MAPPING`: Sets whether to use plain plate carrée projection, or try to compesate is based on the median latitude for a nicer image. Should be turned off if the median latitude is too far off the North or South, or not in the `[-90..90]` range.
 
 You can also change the styling on the output by changing any of the other values
 

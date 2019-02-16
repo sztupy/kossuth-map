@@ -3,9 +3,9 @@
 console.log('Preparing data');
 
 // configuration
-const INPUT_FILE_NAME = 'datasets/gb_pubs.json';
-const BOUNDARY_FILE_NAME = 'boundaries/great_britain.json';
-const OUTPUT_FILE_NAME = 'images/gb_pubs.png';
+const INPUT_FILE_NAME = 'datasets/distilleries.json';
+const BOUNDARY_FILE_NAME = 'boundaries/scotland.json';
+const OUTPUT_FILE_NAME = 'images/scottish_distilleries.png';
 
 const IMAGE_WIDTH = 10000; // px
 
@@ -15,6 +15,9 @@ const BORDER_PROCESSING_MODE = 1;
 // 0: slowest; gives best results on concave countries with lots of islands
 // 1: middle ground; gives okay results for countries with lots of islands, but can skip some border points in concave countries
 // 2: fastest; works okay for single polygon, convex countries with no islands
+const AUTO_ADJUST_COORDINATE_MAPPING = true;
+// when true it will adjust the height of the image based on the median latitude as well - but keep a simple equirectangular projection
+// When turned off will use plain plate carrée projection
 
 const NODE_FILL_COLOR = "rgba(80,80,80, 0.25)";
 const NODE_STROKE_COLOR = "rgba(0,0,0, 0.5)";
@@ -67,10 +70,6 @@ const LatLon = require('geodesy').LatLonEllipsoidal;
 const points = JSON.parse(fs.readFileSync(INPUT_FILE_NAME));
 const boundary = JSON.parse(fs.readFileSync(BOUNDARY_FILE_NAME));
 
-const boundaryTurf = turf.multiPolygon(boundary);
-
-const delaunay = Delaunay.from(points);
-
 // figure out the boundaries
 var minX = points[0][0];
 var maxX = points[0][0];
@@ -101,6 +100,26 @@ minX -= d; maxX += d;
 d = (maxY-minY)/50;
 minY -= d; maxY += d;
 
+// skew the height values based on the latitude to make it more conformal
+const HEIGHT_ADJUST = AUTO_ADJUST_COORDINATE_MAPPING ? 1 / Math.abs(Math.cos(Math.PI / 180 * minY+((maxY-minY)/2))) : 1;
+
+if (AUTO_ADJUST_COORDINATE_MAPPING) {
+    minY *= HEIGHT_ADJUST;
+    maxY *= HEIGHT_ADJUST;
+
+    for (let i=0; i<points.length; i++) {
+        points[i][1] *= HEIGHT_ADJUST;
+    }
+
+    for (let polygon of boundary) {
+        for (let subpolygon of polygon) {
+            for (let i=0; i< subpolygon.length; i++) {
+                subpolygon[i][1] *= HEIGHT_ADJUST;
+            }
+        }
+    }
+}
+
 // set up the image
 const WIDTH = maxX-minX;
 const HEIGHT = maxY-minY;
@@ -108,11 +127,13 @@ const HEIGHT = maxY-minY;
 const SIZE_X = IMAGE_WIDTH;
 const SIZE_Y = Math.round(SIZE_X / WIDTH * HEIGHT);
 
+const boundaryTurf = turf.multiPolygon(boundary);
 const canvas = createCanvas(SIZE_X, SIZE_Y);
 const ctx = canvas.getContext('2d');
 
 console.log('Generating Voronoi Diagram');
 // calculate the data
+const delaunay = Delaunay.from(points);
 const voronoi = delaunay.voronoi([minX, minY, maxX, maxY]);
 
 // gets the X coordinate on the image from a longitude
@@ -227,8 +248,8 @@ console.log("Obtaining distance data");
 var distanceMap = [];
 for (let point of potentialPoints) {
     let otherPoint = points[delaunay.find(point[0],point[1])];
-    let p1 = new LatLon(point[0], point[1]);
-    let p2 = new LatLon(otherPoint[0], otherPoint[1]);
+    let p1 = new LatLon(point[0], point[1]/HEIGHT_ADJUST);
+    let p2 = new LatLon(otherPoint[0], otherPoint[1]/HEIGHT_ADJUST);
     let d = p1.distanceTo(p2);
     distanceMap.push([d, {
         point: point,
@@ -248,8 +269,8 @@ while (distanceCluster.length < NUMBER_OF_CLUSTERS && index < distanceMap.length
     let data = distanceMap[index];
     let minDist = Infinity;
     for (let i = 0; i < distanceCluster.length; i++) {
-        let p1 = new LatLon(data[1].point[0], data[1].point[1]);
-        let p2 = new LatLon(distanceCluster[i][1].point[0], distanceCluster[i][1].point[1]);
+        let p1 = new LatLon(data[1].point[0], data[1].point[1]/HEIGHT_ADJUST);
+        let p2 = new LatLon(distanceCluster[i][1].point[0], distanceCluster[i][1].point[1]/HEIGHT_ADJUST);
         let d = p1.distanceTo(p2);
         if (d < minDist) {
             minDist = d;
@@ -318,13 +339,18 @@ for (let point of intersectPoints) {
 
 var textBoxes = [];
 
+textBoxes.push([-10000,-10000,10,SIZE_Y+10000]);
+textBoxes.push([-10000,-10000,SIZE_X+10000,10]);
+textBoxes.push([SIZE_X-10,-100000,SIZE_X+10000,SIZE_Y+10000]);
+textBoxes.push([-10000,SIZE_Y-10,SIZE_X+10000,SIZE_Y+10000]);
+
 for (let i = 0; i < distanceCluster.length; i++) {
     ctx.fillStyle = FOUND_NODE_FILL_COLOR;
     ctx.strokeStyle = FOUND_NODE_STROKE_COLOR;
     ctx.lineWidth = FOUND_NODE_STROKE_WIDTH;
     let data = distanceCluster[i][1];
     drawCircle(ctx, data.point, FOUND_NODE_RADIUS);
-    console.log("Point from "+data.point[1]+","+data.point[0]+" to "+data.destination[1]+","+data.destination[0]+" is "+distanceCluster[i][0]/1000+"km");
+    console.log("Point from "+data.point[1]/HEIGHT_ADJUST+","+data.point[0]+" to "+data.destination[1]/HEIGHT_ADJUST+","+data.destination[0]+" is "+distanceCluster[i][0]/1000+"km");
 
     ctx.font = FOUND_NODE_FONT;
     ctx.fillStyle = FOUND_NODE_FONT_FILL_COLOR;
@@ -335,7 +361,7 @@ for (let i = 0; i < distanceCluster.length; i++) {
 
     let textX = getX(data.point[0]) + FOUND_NODE_RADIUS;
     let textY = getY(data.point[1]) + FOUND_NODE_RADIUS;
-    let text = data.point[1]+"\n"+data.point[0]+"\n"+distanceCluster[i][0]/1000+"km";
+    let text = data.point[1]/HEIGHT_ADJUST+"\n"+data.point[0]+"\n"+distanceCluster[i][0]/1000+"km";
     let textWidth = ctx.measureText(text).width;
 
     // crappy algorithm to make the textboxes not overlap
@@ -350,12 +376,15 @@ for (let i = 0; i < distanceCluster.length; i++) {
                    textBoxes[ii][3] < textY
                   )
                ) {
-                textX += Math.random() * FOUND_NODE_TEXT_HEIGHT - FOUND_NODE_TEXT_HEIGHT/2;
-                textY += Math.random() * FOUND_NODE_TEXT_HEIGHT - FOUND_NODE_TEXT_HEIGHT/2;
+                textX += Math.random() * FOUND_NODE_TEXT_HEIGHT - (textX/SIZE_X) * FOUND_NODE_TEXT_HEIGHT;
+                textY += Math.random() * FOUND_NODE_TEXT_HEIGHT - (textY/SIZE_Y) * FOUND_NODE_TEXT_HEIGHT;
                 okay = false;
             }
         }
         tries--;
+    }
+    if (tries<=0) {
+        console.log("WARN: Potential label overlap");
     }
 
     ctx.strokeText(text, textX, textY);
