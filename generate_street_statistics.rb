@@ -27,6 +27,7 @@ DATASETS = {
   "majus" => "m[áa]jus 1",
   "marcius" => "m[áa]rcius 15",
   "hosok" => "h[őöo]s[öo]k"
+  "rakoczi" => "r[áa]k[óo]czi"
 }
 
 DATASETS.each do |key, value|
