@@ -18,10 +18,10 @@ const INPUT_FILE_NAME = config.INPUT_FILE_NAME || process.exit(2);
 const BOUNDARY_FILE_NAME = config.BOUNDARY_FILE_NAME || process.exit(2);
 const OUTPUT_FILE_NAME = config.OUTPUT_FILE_NAME || process.exit(2);
 
-const SAVE_PNG = typeof(config.SAVE_PNG !== 'undefined') ? config.SAVE_PNG : true;
-const SAVE_SVG = typeof(config.SAVE_SVG !== 'undefined') ? config.SAVE_SVG : true;
-const SAVE_GEOJSON = typeof(config.SAVE_GEOJSON !== 'undefined') ? config.SAVE_GEOJSON : true;
-const SAVE_JSON = typeof(config.SAVE_JSON !== 'undefined') ? config.SAVE_JSON : true;
+const SAVE_PNG = typeof(config.SAVE_PNG) !== 'undefined' ? config.SAVE_PNG : true;
+const SAVE_SVG = typeof(config.SAVE_SVG) !== 'undefined' ? config.SAVE_SVG : true;
+const SAVE_GEOJSON = typeof(config.SAVE_GEOJSON) !== 'undefined' ? config.SAVE_GEOJSON : true;
+const SAVE_JSON = typeof(config.SAVE_JSON) !== 'undefined' ? config.SAVE_JSON : true;
 
 const IMAGE_WIDTH = config.IMAGE_WIDTH || process.exit(2); // px
 
