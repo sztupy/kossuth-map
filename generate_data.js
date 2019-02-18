@@ -18,6 +18,11 @@ const INPUT_FILE_NAME = config.INPUT_FILE_NAME || process.exit(2);
 const BOUNDARY_FILE_NAME = config.BOUNDARY_FILE_NAME || process.exit(2);
 const OUTPUT_FILE_NAME = config.OUTPUT_FILE_NAME || process.exit(2);
 
+const SAVE_PNG = typeof(config.SAVE_PNG !== 'undefined') ? config.SAVE_PNG : true;
+const SAVE_SVG = typeof(config.SAVE_SVG !== 'undefined') ? config.SAVE_SVG : true;
+const SAVE_GEOJSON = typeof(config.SAVE_GEOJSON !== 'undefined') ? config.SAVE_GEOJSON : true;
+const SAVE_JSON = typeof(config.SAVE_JSON !== 'undefined') ? config.SAVE_JSON : true;
+
 const IMAGE_WIDTH = config.IMAGE_WIDTH || process.exit(2); // px
 
 const NUMBER_OF_CLUSTERS = config.NUMBER_OF_CLUSTERS || process.exit(2);
@@ -586,14 +591,22 @@ let geoJSONData = turf.featureCollection(turfFeatures);
 console.log("Saving image");
 
 // save image to file
-var buf = canvas.toBuffer();
-fs.writeFileSync(OUTPUT_FILE_NAME + ".png", buf);
+if (SAVE_PNG) {
+  var buf = canvas.toBuffer();
+  fs.writeFileSync(OUTPUT_FILE_NAME + ".png", buf);
+}
 
-fs.writeFileSync(OUTPUT_FILE_NAME + ".svg", svgCtx.getSerializedSvg().replace('xmlns:xlink="http://www.w3.org/1999/xlink"',""));
+if (SAVE_SVG) {
+    fs.writeFileSync(OUTPUT_FILE_NAME + ".svg", svgCtx.getSerializedSvg().replace('xmlns:xlink="http://www.w3.org/1999/xlink"',""));
+}
 
-fs.writeFileSync(OUTPUT_FILE_NAME + ".geojson", JSON.stringify(geoJSONData));
+if (SAVE_GEOJSON) {
+    fs.writeFileSync(OUTPUT_FILE_NAME + ".geojson", JSON.stringify(geoJSONData));
+}
 
-fs.writeFileSync(OUTPUT_FILE_NAME + ".json", JSON.stringify(statisticsDump));
+if (SAVE_JSON) {
+    fs.writeFileSync(OUTPUT_FILE_NAME + ".json", JSON.stringify(statisticsDump));
+}
 
 console.log(statisticsDump.statistics);
 

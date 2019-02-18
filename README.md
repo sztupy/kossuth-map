@@ -85,16 +85,18 @@ The dataset is called `kossuth_points.json`. To generate the file I used the fol
 2. Extract all streets from the osm into an xml:
 
 ```
-osmosis –read-pbf-fast hungary.osm.pbf file=“hungary.osm.pbf” –way-key keyList=highway –way-key keyList=name –used-node –tag-filter reject-relations  –write-xml file=“hungary2.osm”
+osmosis –read-pbf-fast hungary.osm.pbf file="hungary.osm.pbf" --way-key keyList=highway --way-key keyList=name --used-node --tag-filter reject-relations  --write-xml file="hungary2.osm"
 ```
 
 3. Extract street names from it and filter by kossuth
 
 ```
-osmconvert hungary2.osm –all-to-nodes –csv=“@id @lon @lat name” –csv-headline | grep -i kossuth > streets.csv
+osmconvert hungary2.osm --all-to-nodes --csv=""@id @lon @lat name" --csv-headline | grep -i kossuth > streets.csv
 ```
 
 4. Finally I converted the CSV to JSON using vi manually.
+
+There's also a script added called `generate_street_names.rb` that does steps 3 and 4 automatically to a list of street names
 
 ### Points furthest away in Hungary from any sports complex
 

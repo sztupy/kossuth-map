@@ -1,0 +1,11 @@
+    {
+      "INPUT_FILE_NAME": "datasets/street_szent.json",
+      "BOUNDARY_FILE_NAME": "boundaries/hungary.json",
+      "OUTPUT_FILE_NAME": "images/street_szent",
+      "CLUSTERING_MINIMUM_DISTANCE": 15,
+      "NUMBER_OF_CLUSTERS": 40,
+      "IMAGE_WIDTH": 10000,
+      "SAVE_PNG": false,
+      "SAVE_SVG": false,
+      "SAVE_JSON": false
+    }
