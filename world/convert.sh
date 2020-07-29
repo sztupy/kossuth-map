@@ -41,10 +41,10 @@ osmfilter balaton-nodes.o5m --keep="*name*=*balaton* or *name*=*BALATON* or *nam
 osmtogeojson balaton-nodes-filtered.osm > balaton.geojson
 
 
-osmfilter planet.o5m --keep="*=*Borsod* or *=*borsod* or *=*BORSOD*" --drop-author -o="borsod-filtered.o5m"
-osmconvert borsod-filtered.o5m --all-to-nodes -o="borsod-nodes.o5m"
-osmfilter borsod-nodes.o5m --keep="*name*=*borsod* or *name*=*BORSOD* or *name*=*Borsod* or *inscription*=*Borsod* or *description*=*Borsod* or *ref*=*Borsod*" --drop-author --ignore-dependencies -o="borsod-nodes-filtered.osm"
-osmtogeojson borsod-nodes-filtered.osm > borsod.geojson
+osmfilter planet.o5m --keep="*=*Hungar* or *=*hungar* or *=*HUNGAR* or *=*magyar* or *=*Magyar* or *=*MAGYAR* or *=*Hongar* or *=*Hongri* or *=*Madarsk* or *=*Ungarn* or *=*Wegry* or *=*Węgry* or *=*Ungaria*" --drop-author -o="hungary-filtered.o5m"
+osmconvert hungary-filtered.o5m --all-to-nodes -o="hungary-nodes.o5m"
+osmfilter hungary-nodes.o5m --keep="*name*=*hungar* or *name*=*HUNGAR* or *name*=*Hungar* or *inscription*=*Hungar* or *description*=*Hungar* or *ref*=*Hungar* or *name*=*Hongar* or *inscription*=*Hongar* or *description*=*Hongar* or *ref*=*Hongar* or *name*=*Hongri* or *inscription*=*Hongri* or *description*=*Hongri* or *ref*=*Hongri* or *name*=*Madarsk* or *inscription*=*Madarsk* or *description*=*Madarsk* or *ref*=*Madarsk* or *name*=*Ungarn* or *inscription*=*Ungarn* or *description*=*Ungarn* or *ref*=*Ungarn* or *name*=*Wegry* or *inscription*=*Wegry* or *description*=*Wegry* or *ref*=*Wegry* or *name*=*Węgry* or *inscription*=*Węgry* or *description*=*Węgry* or *ref*=*Węgry* or *name*=*Ungaria* or *inscription*=*Ungaria* or *description*=*Ungaria* or *ref*=*Ungaria*" --drop-author --ignore-dependencies -o="hungary-nodes-filtered.osm"
+osmtogeojson hungary-nodes-filtered.osm > hungary.geojson
 
 
 osmfilter planet.o5m --keep="*=*London* or *=*london* or *=*LONDON*" --drop-author -o="london-filtered.o5m"
