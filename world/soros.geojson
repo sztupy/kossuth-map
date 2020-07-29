@@ -1,0 +1,5428 @@
+{
+"type": "FeatureCollection",
+"features": [
+{
+  "type": "Feature",
+  "id": "node/150969318",
+  "properties": {
+    "version": "5",
+    "ele": "360",
+    "name": "Los Tesoros",
+    "is_in": "Tempe; Maricopa County",
+    "place": "neighbourhood",
+    "gnis:id": "24934",
+    "gnis:Class": "Populated Place",
+    "gnis:County": "Maricopa",
+    "gnis:ST_num": "04",
+    "import_uuid": "bb7269ee-502a-5391-8056-e3ce0e66489c",
+    "gnis:ST_alpha": "AZ",
+    "gnis:County_num": "013",
+    "id": "node/150969318"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.9129194,
+      33.3286591
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/228651748",
+  "properties": {
+    "version": "9",
+    "name": "Kisoroszi",
+    "place": "village",
+    "ksh_ref": "29850",
+    "population": "943",
+    "postal_code": "2024",
+    "source:population": "KSH (www.ksh.hu)",
+    "source:postal_code": "Magyar Posta (posta.hu)",
+    "source:population:date": "2016-01-01",
+    "source:postal_code:date": "2009-03-01",
+    "id": "node/228651748"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0072798,
+      47.8077185
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/255070424",
+  "properties": {
+    "version": "4",
+    "name": "Tesoros - Mabini",
+    "shop": "convenience",
+    "addr:city": "Manila",
+    "addr:province": "Metro Manila",
+    "id": "node/255070424"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      120.9814894,
+      14.5768065
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/281892693",
+  "properties": {
+    "version": "4",
+    "bus": "yes",
+    "ref": "1250",
+    "name": "Sorosenperän th E",
+    "note": "https://oulunliikenne.fi/1250",
+    "source": "survey",
+    "highway": "bus_stop",
+    "name:fi": "Sorosenperän th E",
+    "shelter": "yes",
+    "departures_board": "timetable",
+    "public_transport": "platform",
+    "id": "node/281892693"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3723604,
+      65.2883368
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/337657718",
+  "properties": {
+    "version": "6",
+    "name": "Оросієво",
+    "place": "village",
+    "koatuu": "2120487601",
+    "name:en": "Orosiievo",
+    "name:hu": "Sárosoroszi",
+    "name:ru": "Оросиево",
+    "name:uk": "Оросієво",
+    "wikidata": "Q831413",
+    "wikipedia": "uk:Оросієво",
+    "population": "895",
+    "name:prefix": "село",
+    "wikipedia:ru": "Оросиево",
+    "addr:postcode": "90263",
+    "id": "node/337657718"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.82032,
+      48.163029
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/414674605",
+  "properties": {
+    "version": "11",
+    "name": "Vámosoroszi",
+    "place": "village",
+    "ksh_ref": "08934",
+    "name:ru": "Вамошороси",
+    "population": "517",
+    "postal_code": "4966",
+    "source:population": "KSH (www.ksh.hu)",
+    "source:postal_code": "A Magyar Köztársaság Helységnévtára, 2009",
+    "source:population:date": "2016-01-01",
+    "id": "node/414674605"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.6817762,
+      47.9921273
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/418724555",
+  "properties": {
+    "version": "9",
+    "name": "Kukučínov",
+    "place": "village",
+    "name:hu": "Nemesoroszi",
+    "population": "607",
+    "postal_code": "937 01",
+    "id": "node/418724555"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      18.6987509,
+      48.0909969
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/454126434",
+  "properties": {
+    "version": "10",
+    "name": "Soroștin",
+    "is_in": "Șeica Mică,Sibiu,România",
+    "place": "village",
+    "name:de": "Schorsten",
+    "name:hu": "Sorostély",
+    "name:uk": "Сороштін",
+    "name:gem": "Schoresten",
+    "wikidata": "Q753215",
+    "wikipedia": "ro:Soroștin, Sibiu",
+    "population": "676",
+    "postal_code": "557256",
+    "siruta:code": "145756",
+    "siruta:type": "23",
+    "is_in:county": "Sibiu",
+    "is_in:country": "România",
+    "siruta:county": "Sibiu",
+    "old_postal_code": "3164",
+    "siruta:code_sup": "145738",
+    "siruta:name_sup": "Șeica Mică",
+    "siruta:county_id": "32",
+    "postal_code:source": "INSSE - SIRUTA",
+    "siruta:county_code": "SB",
+    "population:census:1992": "676",
+    "id": "node/454126434"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      24.0610757,
+      46.029242
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/460355102",
+  "properties": {
+    "version": "7",
+    "name": "Orosia",
+    "is_in": "Cuci;Mureș;România",
+    "place": "village",
+    "name:hu": "Marosoroszi",
+    "name:uk": "Оросія",
+    "wikidata": "Q741178",
+    "wikipedia": "hu:Marosoroszi",
+    "population": "199",
+    "postal_code": "547198",
+    "siruta:code": "116475",
+    "siruta:type": "23",
+    "is_in:county": "Mureș",
+    "is_in:country": "România",
+    "siruta:county": "Mureș",
+    "old_postal_code": "4356",
+    "siruta:code_sup": "116439",
+    "siruta:name_sup": "Cuci",
+    "siruta:county_id": "26",
+    "postal_code:source": "INSSE - SIRUTA",
+    "siruta:county_code": "MS",
+    "population:census:1992": "199",
+    "id": "node/460355102"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      24.140508,
+      46.4565107
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/460363168",
+  "properties": {
+    "version": "8",
+    "name": "Rușii-Munți",
+    "is_in": "Mureș;România",
+    "place": "village",
+    "name:hu": "Marosoroszfalu",
+    "name:uk": "Рушій-Мунць",
+    "wikidata": "Q1087806",
+    "wikipedia": "ro:Rușii-Munți, Mureș",
+    "population": "1420",
+    "postal_code": "547505",
+    "siruta:code": "119162",
+    "siruta:type": "22",
+    "is_in:county": "Mureș",
+    "is_in:country": "România",
+    "siruta:county": "Mureș",
+    "old_postal_code": "4238",
+    "siruta:code_sup": "119153",
+    "siruta:name_sup": "Rușii-Munți",
+    "siruta:county_id": "26",
+    "postal_code:source": "INSSE - SIRUTA",
+    "siruta:county_code": "MS",
+    "population:census:1992": "1420",
+    "id": "node/460363168"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      24.8328191,
+      46.9152487
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/462245281",
+  "properties": {
+    "version": "6",
+    "name": "Rus",
+    "is_in": "Dumbrăvița;Maramureș;România",
+    "place": "village",
+    "name:hu": "Kékesoroszfalu",
+    "name:uk": "Рус",
+    "wikidata": "Q683572",
+    "wikipedia": "ro:Rus, Maramureș",
+    "population": "712",
+    "postal_code": "437148",
+    "siruta:code": "108071",
+    "siruta:type": "23",
+    "is_in:county": "Maramureș",
+    "is_in:country": "România",
+    "siruta:county": "Maramureș",
+    "old_postal_code": "4837",
+    "siruta:code_sup": "108035",
+    "siruta:name_sup": "Dumbrăvița",
+    "siruta:county_id": "24",
+    "postal_code:source": "INSSE - SIRUTA",
+    "siruta:county_code": "MM",
+    "population:census:1992": "712",
+    "id": "node/462245281"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      23.6693831,
+      47.6129238
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/485612532",
+  "properties": {
+    "version": "5",
+    "name": "Kisoroszi",
+    "ferry": "yes",
+    "amenity": "ferry_terminal",
+    "website": "http://kompok-revek.hu/revatkelok/dunai-komp/kisoroszi-szentgyorgypuszta-komp/",
+    "public_transport": "station",
+    "id": "node/485612532"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0093996,
+      47.8056722
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/486635929",
+  "properties": {
+    "version": "2",
+    "url": "http://turistautak.hu/poi.php?id=91775",
+    "name": "Kisoroszi rév",
+    "source": "turistautak.hu",
+    "amenity": "ferry_terminal",
+    "source:date": "2013-11-01",
+    "id": "node/486635929"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0134285,
+      47.8212618
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/492040652",
+  "properties": {
+    "version": "11",
+    "name": "Gyöngyösoroszi",
+    "place": "village",
+    "ksh_ref": "13338",
+    "name:ru": "Дьёндьёшоросси",
+    "population": "1533",
+    "postal_code": "3211",
+    "source:population": "KSH (www.ksh.hu)",
+    "source:postal_code": "Magyar Posta (posta.hu)",
+    "source:population:date": "2016-01-01",
+    "source:postal_code:date": "2009-03-01",
+    "id": "node/492040652"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8925424,
+      47.8290371
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/636868543",
+  "properties": {
+    "version": "6",
+    "bus": "yes",
+    "name": "Sorosoro Karsada",
+    "share_taxi": "yes",
+    "public_transport": "stop_position",
+    "id": "node/636868543"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0762332,
+      13.8038119
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/678323568",
+  "properties": {
+    "version": "3",
+    "name": "Soros Place",
+    "amenity": "restaurant",
+    "cuisine": "spanish;tapas",
+    "addr:city": "Herzogenrath",
+    "addr:street": "Afdener Straße",
+    "addr:postcode": "52134",
+    "addr:housenumber": "24",
+    "id": "node/678323568"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      6.0958526,
+      50.8662976
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/759127719",
+  "properties": {
+    "version": "2",
+    "name": "ヒナタオソロシノ滝",
+    "waterway": "waterfall",
+    "name:ja-Latn": "Hinataosoroshinotaki",
+    "id": "node/759127719"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      139.3795851,
+      36.8634922
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/759189584",
+  "properties": {
+    "version": "2",
+    "name": "オロオソロシノ滝",
+    "waterway": "waterfall",
+    "name:ja-Latn": "Oroosorosinotaki",
+    "id": "node/759189584"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      139.3811953,
+      36.8593322
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/878927783",
+  "properties": {
+    "version": "6",
+    "name": "Museo de los Naufragios y Tesoros",
+    "fixme": "opening_hours",
+    "name:en": "Museum of Shipwrecks and Treasures",
+    "tourism": "museum",
+    "opening_hours": "closed \"Cerrado Permanentemente - Permamently Closed\"",
+    "id": "node/878927783"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -57.8596089,
+      -34.4396247
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/911591659",
+  "properties": {
+    "version": "2",
+    "name": "Sorosoro",
+    "place": "village",
+    "source": "NGA-GNS-08232010",
+    "place:PH": "barangay",
+    "addr:city": "Mambajao",
+    "addr:province": "Camiguin",
+    "id": "node/911591659"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      124.726173,
+      9.2296128
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/982732055",
+  "properties": {
+    "version": "10",
+    "name": "Руско Село",
+    "place": "village",
+    "name:de": "Ruskodorf",
+    "name:en": "Rusko Selo",
+    "name:hu": "Kisorosz",
+    "name:sr": "Руско Село",
+    "wikidata": "Q1042546",
+    "name:hu_1": "Torontáloroszi",
+    "wikipedia": "sr:Руско Село",
+    "population": "2813",
+    "name:sr-Latn": "Rusko Selo",
+    "population:date": "2011",
+    "id": "node/982732055"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.5728583,
+      45.7588927
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1020493370",
+  "properties": {
+    "version": "4",
+    "bus": "yes",
+    "name": "Sorosi",
+    "highway": "bus_stop",
+    "public_transport": "platform",
+    "id": "node/1020493370"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -52.2957384,
+      4.9344155
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1020493384",
+  "properties": {
+    "version": "4",
+    "bus": "yes",
+    "name": "Sorosi",
+    "highway": "bus_stop",
+    "public_transport": "platform",
+    "id": "node/1020493384"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -52.2955171,
+      4.9345995
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241457654",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "source:file": "http://centrodedescargas.cnig.es/CentroDescargas/equipamiento/NGBE_de_caracter_Provisional.zip",
+    "source:name": "Nomenclator Geográfico Básico de España",
+    "id": "node/1241457654"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -4.933967,
+      40.9012386
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241483721",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "source:file": "http://centrodedescargas.cnig.es/CentroDescargas/equipamiento/NGBE_de_caracter_Provisional.zip",
+    "source:name": "Nomenclator Geográfico Básico de España",
+    "id": "node/1241483721"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -4.5768937,
+      40.2591074
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241495549",
+  "properties": {
+    "version": "2",
+    "name": "Los Tesoros",
+    "note": "If you change this node, please, report to nomenclatorign at gmail dot com. Thank you.",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "ngbe:id": "542180",
+    "note:es": "Si realizas algún cambio en este nodo, por favor, comunícalo a nomenclatorign at gmail dot com. Gracias.",
+    "ngbe:huso": "29",
+    "ngbe:tema": "Toponimia",
+    "ngbe:grupo": "Relieve",
+    "ngbe:codigo": "80214",
+    "source:date": "201011",
+    "source:file": "http://centrodedescargas.cnig.es/CentroDescargas/equipamiento/NGBE_de_caracter_Provisional.zip",
+    "source:name": "Nomenclator Geográfico Básico de España",
+    "ngbe:version": "provisional",
+    "ngbe:lat_ed50": "-6.1478732538",
+    "ngbe:lon_ed50": "40.6224591188",
+    "ngbe:subgrupo": "Parajes",
+    "ngbe:hojabcn25": "0527-1",
+    "ngbe:tipotexto": "S",
+    "ngbe:xutm_ed50": "741258",
+    "ngbe:yutm_ed50": "4500837",
+    "id": "node/1241495549"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -6.1492521,
+      40.6212605
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241496289",
+  "properties": {
+    "version": "2",
+    "name": "Los Tesoros",
+    "note": "If you change this node, please, report to nomenclatorign at gmail dot com. Thank you.",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "ngbe:id": "527054",
+    "note:es": "Si realizas algún cambio en este nodo, por favor, comunícalo a nomenclatorign at gmail dot com. Gracias.",
+    "ngbe:huso": "29",
+    "ngbe:tema": "Toponimia",
+    "ngbe:grupo": "Relieve",
+    "ngbe:codigo": "80214",
+    "source:date": "201011",
+    "source:file": "http://centrodedescargas.cnig.es/CentroDescargas/equipamiento/NGBE_de_caracter_Provisional.zip",
+    "source:name": "Nomenclator Geográfico Básico de España",
+    "ngbe:version": "provisional",
+    "ngbe:lat_ed50": "-6.1677127789",
+    "ngbe:lon_ed50": "40.8171335103",
+    "ngbe:subgrupo": "Parajes",
+    "ngbe:hojabcn25": "0502-1",
+    "ngbe:tipotexto": "S",
+    "ngbe:xutm_ed50": "738882",
+    "ngbe:yutm_ed50": "4522397",
+    "id": "node/1241496289"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -6.1690986,
+      40.8159394
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241506963",
+  "properties": {
+    "version": "2",
+    "name": "Los Tesoros",
+    "note": "If you change this node, please, report to nomenclatorign at gmail dot com. Thank you.",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "ngbe:id": "526790",
+    "note:es": "Si realizas algún cambio en este nodo, por favor, comunícalo a nomenclatorign at gmail dot com. Gracias.",
+    "ngbe:huso": "29",
+    "ngbe:tema": "Toponimia",
+    "ngbe:grupo": "Relieve",
+    "ngbe:codigo": "80214",
+    "source:date": "201011",
+    "source:file": "http://centrodedescargas.cnig.es/CentroDescargas/equipamiento/NGBE_de_caracter_Provisional.zip",
+    "source:name": "Nomenclator Geográfico Básico de España",
+    "ngbe:version": "provisional",
+    "ngbe:lat_ed50": "-6.2446191412",
+    "ngbe:lon_ed50": "40.8021817038",
+    "ngbe:subgrupo": "Parajes",
+    "ngbe:hojabcn25": "0501-2",
+    "ngbe:tipotexto": "S",
+    "ngbe:xutm_ed50": "732447",
+    "ngbe:yutm_ed50": "4520530",
+    "id": "node/1241506963"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -6.2460061,
+      40.8009858
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241510392",
+  "properties": {
+    "version": "2",
+    "name": "Los Tesoros",
+    "note": "If you change this node, please, report to nomenclatorign at gmail dot com. Thank you.",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "ngbe:id": "541429",
+    "note:es": "Si realizas algún cambio en este nodo, por favor, comunícalo a nomenclatorign at gmail dot com. Gracias.",
+    "ngbe:huso": "29",
+    "ngbe:tema": "Toponimia",
+    "ngbe:grupo": "Relieve",
+    "ngbe:codigo": "80214",
+    "source:date": "201011",
+    "source:file": "http://centrodedescargas.cnig.es/CentroDescargas/equipamiento/NGBE_de_caracter_Provisional.zip",
+    "source:name": "Nomenclator Geográfico Básico de España",
+    "ngbe:version": "provisional",
+    "ngbe:lat_ed50": "-6.6555424848",
+    "ngbe:lon_ed50": "40.5137921218",
+    "ngbe:subgrupo": "Parajes",
+    "ngbe:hojabcn25": "0525-4",
+    "ngbe:tipotexto": "S",
+    "ngbe:xutm_ed50": "698632",
+    "ngbe:yutm_ed50": "4487504",
+    "id": "node/1241510392"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -6.6569253,
+      40.5125812
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241635860",
+  "properties": {
+    "version": "3",
+    "name": "Era de los Tesoros",
+    "place": "locality",
+    "id": "node/1241635860"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.8094678,
+      39.7594971
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241721205",
+  "properties": {
+    "version": "2",
+    "name": "Los Tesoros",
+    "note": "If you change this node, please, report to nomenclatorign at gmail dot com. Thank you.",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "ngbe:id": "496332",
+    "note:es": "Si realizas algún cambio en este nodo, por favor, comunícalo a nomenclatorign at gmail dot com. Gracias.",
+    "ngbe:huso": "30",
+    "ngbe:tema": "Toponimia",
+    "ngbe:grupo": "Relieve",
+    "ngbe:codigo": "80214",
+    "source:date": "201011",
+    "source:file": "http://centrodedescargas.cnig.es/CentroDescargas/equipamiento/NGBE_de_caracter_Provisional.zip",
+    "source:name": "Nomenclator Geográfico Básico de España",
+    "ngbe:version": "provisional",
+    "ngbe:lat_ed50": "-5.8136811741",
+    "ngbe:lon_ed50": "41.0801198258",
+    "ngbe:subgrupo": "Parajes",
+    "ngbe:hojabcn25": "0452-3",
+    "ngbe:tipotexto": "S",
+    "ngbe:xutm_ed50": "263628",
+    "ngbe:yutm_ed50": "4551546",
+    "id": "node/1241721205"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.815063,
+      41.0789406
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241748457",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1241748457"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.7780269,
+      41.880994
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241763877",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1241763877"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.9125607,
+      41.8854479
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241803472",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1241803472"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.6612555,
+      41.6705017
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1241863793",
+  "properties": {
+    "version": "3",
+    "name": "Bancal de los Tesoros",
+    "place": "locality",
+    "id": "node/1241863793"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -1.7858962,
+      39.1031952
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242035951",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1242035951"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.9515686,
+      41.5823536
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242333583",
+  "properties": {
+    "version": "3",
+    "name": "Piedra de los Tesoros",
+    "place": "locality",
+    "id": "node/1242333583"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.696796,
+      36.9878737
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242351447",
+  "properties": {
+    "version": "3",
+    "name": "Cerro de los Tesoros",
+    "place": "locality",
+    "id": "node/1242351447"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.1145738,
+      37.8412956
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242355789",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "id": "node/1242355789"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.3910177,
+      36.8998157
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242401002",
+  "properties": {
+    "version": "3",
+    "name": "Soros",
+    "place": "locality",
+    "id": "node/1242401002"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -3.1525386,
+      42.1424729
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242447833",
+  "properties": {
+    "version": "3",
+    "name": "Tesoros",
+    "place": "locality",
+    "id": "node/1242447833"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -3.4741296,
+      41.7609194
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242614651",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1242614651"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.4812055,
+      42.1519765
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242667298",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1242667298"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.30795,
+      42.4366339
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1242989033",
+  "properties": {
+    "version": "3",
+    "name": "Sorosakona",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1242989033"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.3621364,
+      43.269311
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1243012453",
+  "properties": {
+    "version": "3",
+    "name": "Los Soros",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1243012453"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -1.7582103,
+      42.9177284
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1243019023",
+  "properties": {
+    "version": "3",
+    "name": "Sorosgain",
+    "place": "locality",
+    "source": "Instituto Geográfico Nacional",
+    "source:date": "201011",
+    "id": "node/1243019023"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.1788837,
+      42.8590998
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1270566292",
+  "properties": {
+    "version": "2",
+    "ele": "993",
+    "name": "Sassorosso",
+    "place": "hamlet",
+    "source": "Istat 2001 - geodati.gfoss.it",
+    "gfoss_id": "44884",
+    "istat_id": "2147483647",
+    "population": "52",
+    "id": "node/1270566292"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      10.3998549,
+      44.1836569
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1308688259",
+  "properties": {
+    "version": "1",
+    "name": "Sorosutan",
+    "place": "village",
+    "is_in:state": "Daerah Istimewa Yogyakarta",
+    "is_in:county": "Umbulharjo",
+    "is_in:region": "Kota Yogyakarta",
+    "is_in:country": "Indonesia",
+    "id": "node/1308688259"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      110.3781469,
+      -7.8237168
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1481966857",
+  "properties": {
+    "version": "2",
+    "name": "Tesoros de Chile",
+    "amenity": "restaurant",
+    "addr:street": "Avenida Concha y Toro",
+    "addr:housenumber": "02310",
+    "id": "node/1481966857"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -70.5732595,
+      -33.6329737
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1627540720",
+  "properties": {
+    "version": "4",
+    "bus": "yes",
+    "name": "Kisoroszi, Hősök tere",
+    "highway": "bus_stop",
+    "operator": "Volánbusz",
+    "public_transport": "platform",
+    "id": "node/1627540720"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0104078,
+      47.8073956
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1627540724",
+  "properties": {
+    "version": "3",
+    "bus": "yes",
+    "name": "Kisoroszi, Széchenyi utca",
+    "highway": "bus_stop",
+    "operator": "Volánbusz",
+    "public_transport": "platform",
+    "id": "node/1627540724"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0193961,
+      47.8051714
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1627540740",
+  "properties": {
+    "version": "3",
+    "bus": "yes",
+    "name": "Kisoroszi, Széchenyi utca",
+    "highway": "bus_stop",
+    "operator": "Volánbusz",
+    "public_transport": "platform",
+    "id": "node/1627540740"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0182672,
+      47.8054952
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1687587179",
+  "properties": {
+    "version": "2",
+    "name": "Soroscopa",
+    "place": "hamlet",
+    "population": "196",
+    "is_in:state": "Potosi",
+    "survey:date": "2019-08-05",
+    "source:population": "ine.gob.bo;2016",
+    "id": "node/1687587179"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -65.6081873,
+      -18.8640504
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1762967666",
+  "properties": {
+    "version": "4",
+    "name": "Les Sorossis",
+    "place": "neighbourhood",
+    "id": "node/1762967666"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -52.3005352,
+      4.9360716
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1815325894",
+  "properties": {
+    "version": "1",
+    "name": "Tesoros de Dios",
+    "amenity": "school",
+    "id": "node/1815325894"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -86.3545999,
+      12.1009908
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1844242962",
+  "properties": {
+    "version": "3",
+    "name": "Απάντημα",
+    "place": "hamlet",
+    "source": "geodata.gov.gr",
+    "name:el": "Σωρός",
+    "name:en": "Soros",
+    "addr:postcode": "84007",
+    "id": "node/1844242962"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.0702429,
+      36.9822826
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1932883271",
+  "properties": {
+    "version": "2",
+    "name": "Fundația Soros",
+    "amenity": "arts_centre",
+    "tourism": "attraction",
+    "website": "http://www.soros.ro/",
+    "id": "node/1932883271"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      26.0964325,
+      44.4502047
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2072488240",
+  "properties": {
+    "version": "2",
+    "name": "Cruce a Soroscopa",
+    "junction": "yes",
+    "destination": "Soroscopa",
+    "id": "node/2072488240"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -65.6061074,
+      -18.8713644
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2105466785",
+  "properties": {
+    "version": "2",
+    "name": "Sorosoro Ibaba Development Cooperative",
+    "office": "association",
+    "addr:place": "Balanga",
+    "id": "node/2105466785"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.140039,
+      13.8088364
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2285538195",
+  "properties": {
+    "version": "3",
+    "name": "Σωρός",
+    "place": "neighbourhood",
+    "name:el": "Σωρός",
+    "name:en": "Soros",
+    "name:fr": "Soros",
+    "id": "node/2285538195"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      23.8095617,
+      38.0445594
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2343357276",
+  "properties": {
+    "version": "6",
+    "name": "Сорос",
+    "shop": "computer",
+    "craft": "electronics_repair",
+    "phone": "+380564093429",
+    "name:en": "Soros",
+    "name:ru": "Сорос",
+    "name:uk": "Сорос",
+    "website": "www.soros.dp.ua/",
+    "opening_hours": "Mo-Fr 09:00-18:00; Sa 10:00-15:00",
+    "id": "node/2343357276"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      33.4032315,
+      47.9076984
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2383669880",
+  "properties": {
+    "version": "5",
+    "name": "Tesoros de Cuba Charutaria",
+    "source": "survey",
+    "amenity": "bar",
+    "smoking": "yes",
+    "website": "http://www.facebook.com/tesorosdecuba",
+    "alt_name": "Tesoros de Cuba",
+    "addr:street": "Rua Comendador Araújo",
+    "addr:postcode": "80420-000",
+    "internet_access": "wlan",
+    "addr:housenumber": "497",
+    "id": "node/2383669880"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -49.2800079,
+      -25.4369223
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2451522698",
+  "properties": {
+    "version": "1",
+    "ele": "1314",
+    "name": "Alpe di Sassorosso",
+    "natural": "peak",
+    "id": "node/2451522698"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      10.4059465,
+      44.2076538
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2483244533",
+  "properties": {
+    "version": "1",
+    "name": "Sorosoro Ibaba Development Cooperative",
+    "shop": "money_lender",
+    "addr:city": "San Pablo",
+    "addr:street": "Lauro Dizon",
+    "addr:postcode": "4000",
+    "addr:housenumber": "27A",
+    "id": "node/2483244533"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.3252582,
+      14.0714602
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2532423302",
+  "properties": {
+    "version": "2",
+    "name": "Sorosimbahan",
+    "fixme": "Copied from topo map, please add name and correct location, then remove this fixme.",
+    "place": "hamlet",
+    "source": "US Army Topo Map",
+    "id": "node/2532423302"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      123.9883958,
+      11.8156794
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2534425686",
+  "properties": {
+    "version": "4",
+    "name": "Zapatería Mis Tesoros",
+    "shop": "shoes",
+    "phone": "+34 691156476",
+    "building": "commercial",
+    "id": "node/2534425686"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -4.0424694,
+      37.1960614
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2590690118",
+  "properties": {
+    "version": "2",
+    "name": "Hétsoros Pincefalu",
+    "tourism": "attraction",
+    "id": "node/2590690118"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.7915522,
+      47.81704
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2614964601",
+  "properties": {
+    "version": "2",
+    "name": "2 Tesoros",
+    "shop": "kiosk",
+    "id": "node/2614964601"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -56.220039,
+      -34.8234239
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2684629652",
+  "properties": {
+    "version": "3",
+    "name": "Tesoros Cafe",
+    "phone": "(518) 631-5834",
+    "amenity": "cafe",
+    "cuisine": "coffee_shop",
+    "website": "www.cafetesoros.com/",
+    "addr:city": "Schenectady",
+    "addr:street": "Union Street",
+    "addr:postcode": "12309",
+    "opening_hours": "Tu-Su 08:00-17:00",
+    "payment:bitcoin": "yes",
+    "addr:housenumber": "1712",
+    "id": "node/2684629652"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -73.9024018,
+      42.8038602
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2965961470",
+  "properties": {
+    "version": "3",
+    "name": "Kisoroszi Helytörténeti Múzeum",
+    "tourism": "museum",
+    "id": "node/2965961470"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0109063,
+      47.8076376
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2965970544",
+  "properties": {
+    "version": "1",
+    "name": "Örvény",
+    "tourism": "artwork",
+    "alt_name": "Kisoroszi kerék",
+    "start_date": "2003",
+    "artist_name": "Menasági Péter",
+    "artwork_type": "sculpture",
+    "id": "node/2965970544"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0107434,
+      47.8072921
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2966008267",
+  "properties": {
+    "version": "3",
+    "name": "Kisoroszi kálvária",
+    "is_in": "Kisoroszi kálvária",
+    "historic": "wayside_cross",
+    "start_date": "1888",
+    "id": "node/2966008267"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0013791,
+      47.8096164
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3032718456",
+  "properties": {
+    "version": "2",
+    "name": "Los Tesoros del Inca II",
+    "amenity": "restaurant",
+    "cuisine": "peruvian",
+    "addr:street": "San Antonio",
+    "addr:housenumber": "523",
+    "id": "node/3032718456"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -70.6484302,
+      -33.43667
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3043281033",
+  "properties": {
+    "version": "4",
+    "name": "Gyöngyösoroszi, Ércbánya",
+    "highway": "bus_stop",
+    "shelter": "no",
+    "id": "node/3043281033"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8694139,
+      47.8679633
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3043281035",
+  "properties": {
+    "version": "5",
+    "name": "Gyöngyösoroszi, Ércbánya",
+    "highway": "bus_stop",
+    "shelter": "no",
+    "id": "node/3043281035"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8694097,
+      47.8682477
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3079765223",
+  "properties": {
+    "version": "1",
+    "name": "DOSSOROSSO",
+    "source": "UNICEF",
+    "amenity": "school",
+    "toilets": "yes",
+    "addr:city": "Dossorosso Bamana",
+    "restaurant": "no",
+    "isced:level": "1",
+    "is_in:cercle": "BLA",
+    "is_in:commune": "SAMABOGO",
+    "is_in:village": "Dossorosso Bamana",
+    "operator:type": "community",
+    "school:ML:cap": "BLA",
+    "drinking_water": "no",
+    "toilets:number": "3",
+    "capacity:pupils": "131",
+    "capacity:teachers": "3",
+    "school:ML:academie": "SAN",
+    "id": "node/3079765223"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.5672944,
+      12.8301506
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3082194546",
+  "properties": {
+    "version": "1",
+    "name": "Samassorosso",
+    "place": "village",
+    "id": "node/3082194546"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -4.3427703,
+      8.5175171
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3216012862",
+  "properties": {
+    "version": "2",
+    "name": "Hatsoros varjúháj",
+    "hiking": "yes",
+    "tourism": "information",
+    "map_type": "image",
+    "addr:city": "Vilonya",
+    "board_type": "plants",
+    "information": "board",
+    "addr:postcode": "8194",
+    "id": "node/3216012862"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      18.0669033,
+      47.1280258
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3244128814",
+  "properties": {
+    "version": "3",
+    "name": "هتل سنتی سروش",
+    "phone": "+98 35 6268802",
+    "stars": "2",
+    "name:en": "Sorosh Traditional Hotel",
+    "tourism": "hotel",
+    "old_name": "خانه شاه شجاع",
+    "id": "node/3244128814"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      54.3755241,
+      31.8881213
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3437754797",
+  "properties": {
+    "version": "1",
+    "url": "http://turistautak.hu/poi.php?id=107908",
+    "name": "Soros-tebri-barlang",
+    "source": "turistautak.hu",
+    "natural": "cave_entrance",
+    "source:date": "2013-12-02",
+    "id": "node/3437754797"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.59177,
+      48.12857
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3445505570",
+  "properties": {
+    "version": "1",
+    "url": "http://turistautak.hu/poi.php?id=94061",
+    "name": "Gyöngyösoroszi altáró (ércbánya)",
+    "source": "turistautak.hu",
+    "man_made": "mineshaft",
+    "source:date": "2013-06-22",
+    "id": "node/3445505570"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.870683,
+      47.867067
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3445505571",
+  "properties": {
+    "version": "2",
+    "url": "http://turistautak.hu/poi.php?id=42588",
+    "name": "Gyöngyösoroszi, Vízgyűjtő",
+    "source": "turistautak.hu",
+    "highway": "bus_stop",
+    "shelter": "no",
+    "source:date": "2013-06-22",
+    "id": "node/3445505571"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8759912,
+      47.8504064
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3445505572",
+  "properties": {
+    "version": "5",
+    "url": "http://turistautak.hu/poi.php?id=42585",
+    "name": "Gyöngyösoroszi, Ércelő bejárati út",
+    "source": "turistautak.hu",
+    "highway": "bus_stop",
+    "shelter": "no",
+    "source:date": "2013-06-22",
+    "id": "node/3445505572"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8805361,
+      47.8415704
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3465156740",
+  "properties": {
+    "version": "1",
+    "url": "http://turistautak.hu/poi.php?id=28916",
+    "name": "Vámosoroszi, alsó",
+    "fixme": "resurvey (source was old)",
+    "source": "turistautak.hu",
+    "highway": "bus_stop",
+    "shelter": "yes",
+    "source:date": "2008-06-06",
+    "id": "node/3465156740"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.6863,
+      47.98775
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3465156741",
+  "properties": {
+    "version": "1",
+    "url": "http://turistautak.hu/poi.php?id=28915",
+    "name": "Vámosoroszi, szövetkezeti bolt",
+    "fixme": "resurvey (source was old)",
+    "source": "turistautak.hu",
+    "highway": "bus_stop",
+    "shelter": "yes",
+    "source:date": "2008-06-06",
+    "id": "node/3465156741"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.684217,
+      47.9914
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3481947563",
+  "properties": {
+    "version": "3",
+    "name": "Dolmen Sorosgain",
+    "image": "https://commons.wikimedia.org/wiki/File:Sorosgain_trikuharria.jpg",
+    "source": "wiki.txoperena.es",
+    "name:es": "Dolmen Sorosgain",
+    "name:eu": "Sorosgain trikuharria",
+    "historic": "archaeological_site",
+    "site_type": "megalith",
+    "megalith_type": "dolmen",
+    "id": "node/3481947563"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.1801721,
+      42.8600604
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3630431863",
+  "properties": {
+    "version": "2",
+    "name": "Jardín Infantil Tesoros de la Tierra",
+    "amenity": "kindergarten",
+    "addr:city": "Combarbalá",
+    "addr:street": "Horacio Carvajal",
+    "id": "node/3630431863"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -70.9976627,
+      -31.1805017
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3644647233",
+  "properties": {
+    "version": "2",
+    "name": "Sorosoro Ibaba",
+    "place": "village",
+    "id": "node/3644647233"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0905095,
+      13.8159946
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3644647234",
+  "properties": {
+    "version": "4",
+    "name": "Sorosoro Karsada",
+    "place": "quarter",
+    "alt_name": "Soro-soro Karsada",
+    "population": "2049",
+    "id": "node/3644647234"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0761262,
+      13.8035556
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3667857544",
+  "properties": {
+    "version": "2",
+    "name": "Jardín Infantil Pequeños Tesoros",
+    "amenity": "kindergarten",
+    "addr:city": "Independencia",
+    "addr:street": "Santiago Arcos",
+    "addr:housenumber": "2699",
+    "id": "node/3667857544"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -70.672064,
+      -33.4142256
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3726799842",
+  "properties": {
+    "version": "2",
+    "bus": "yes",
+    "ref": "1249",
+    "name": "Sorosenperän th P",
+    "note": "https://oulunliikenne.fi/1249",
+    "highway": "bus_stop",
+    "name:fi": "Sorosenperän th P",
+    "shelter": "no",
+    "public_transport": "platform",
+    "id": "node/3726799842"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.372903,
+      65.2882879
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3802697222",
+  "properties": {
+    "version": "1",
+    "name": "Centro Escolar Tesoros del Saber",
+    "source": "SEP-Catalogo de Centros de Trabajo",
+    "amenity": "school",
+    "operator": "Particular",
+    "addr:street": "Ruta Morelos Num. 8802",
+    "description": "Nivel: Primaria; Subnivel: Primaria General; Tipo de servicio: Primaria General; Turno Matutino",
+    "source:date": "28/09/2015",
+    "SEP:CLAVEESC": "02PPR0085X",
+    "addr:postcode": "22234",
+    "id": "node/3802697222"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -116.876227,
+      32.482398
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3802708454",
+  "properties": {
+    "version": "1",
+    "name": "Tesoros del Saber",
+    "source": "SEP-Catalogo de Centros de Trabajo",
+    "amenity": "kindergarten",
+    "operator": "Particular",
+    "addr:street": "Ruta Morelos Num. 8802",
+    "description": "Nivel: Preescolar; Subnivel: Preescolar General; Tipo de servicio: Preescolar General; Turno Matutino",
+    "source:date": "28/09/2015",
+    "SEP:CLAVEESC": "02PJN0337U",
+    "addr:postcode": "22580",
+    "id": "node/3802708454"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -116.876227,
+      32.482398
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3874869363",
+  "properties": {
+    "version": "1",
+    "noi": "yes",
+    "url": "http://turistautak.hu/poi.php?id=176624",
+    "name": "Vámosoroszi, ZZ4 elágazás",
+    "hiking": "yes",
+    "source": "turistautak.hu",
+    "tourism": "information",
+    "information": "route_marker",
+    "id": "node/3874869363"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.686143,
+      47.992863
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/3969242929",
+  "properties": {
+    "version": "2",
+    "name": "Kisorosoro B.C.S. Primary School",
+    "source": "www.ubos.org",
+    "amenity": "school",
+    "wikidata": "Q22325137",
+    "addr:city": "Kisorosoro",
+    "addr:county": "Kibanda",
+    "addr:parish": "Northern Ward",
+    "isced:level": "1",
+    "source:date": "2010..2014",
+    "addr:district": "Kiryandongo",
+    "operator:type": "government",
+    "addr:subcounty": "Kiryandongo Town Council",
+    "id": "node/3969242929"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      32.0535636,
+      1.8844009
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4123693100",
+  "properties": {
+    "version": "2",
+    "url": "http://turistautak.hu/poi.php?id=42585",
+    "name": "Gyöngyösoroszi, Ércelő bejárati út",
+    "source": "turistautak.hu",
+    "highway": "bus_stop",
+    "shelter": "no",
+    "source:date": "2013-06-22",
+    "id": "node/4123693100"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.880657,
+      47.8417095
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4284955289",
+  "properties": {
+    "version": "2",
+    "name": "Marisquería Tesoros",
+    "source": "Reconocimiento cartográfico de campo 2016 por KG.",
+    "amenity": "fast_food",
+    "addr:city": "Quito",
+    "addr:street": "Las Lajas",
+    "id": "node/4284955289"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -78.5367078,
+      -0.2832496
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4419032128",
+  "properties": {
+    "version": "3",
+    "name": "سینما سروش",
+    "amenity": "cinema",
+    "name:en": "Sorosh Cinema",
+    "contact:phone": "+982177632169",
+    "id": "node/4419032128"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.4358337,
+      35.7093181
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4433895993",
+  "properties": {
+    "version": "2",
+    "name": "Sorosoro Karsada (SB)",
+    "highway": "bus_stop",
+    "name:en": "Sorosoro Karsada (Southbound)",
+    "id": "node/4433895993"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0761765,
+      13.8036706
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4453731883",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros del Inca",
+    "source": "Reconocimiento cortográfico de campo 2016 por KG",
+    "amenity": "restaurant",
+    "addr:street": "Morandé",
+    "id": "node/4453731883"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -70.6541689,
+      -33.4375493
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4453997542",
+  "properties": {
+    "version": "3",
+    "name": "Los Tesoros del Inca",
+    "source": "Reconocimiento cortográfico de campo 2016 por KG",
+    "amenity": "restaurant",
+    "addr:street": "Monjitas",
+    "id": "node/4453997542"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -70.6482676,
+      -33.4368898
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4458023970",
+  "properties": {
+    "version": "2",
+    "name": "Ív-pillérsoros magtár",
+    "building": "barn",
+    "historic": "yes",
+    "id": "node/4458023970"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.8000905,
+      46.3502132
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4462477005",
+  "properties": {
+    "version": "2",
+    "name": "Ív-pillérsoros magtár",
+    "building": "barn",
+    "historic": "yes",
+    "id": "node/4462477005"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.9137259,
+      46.3144343
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4507303505",
+  "properties": {
+    "version": "1",
+    "name": "pequeños tesoros gimnasio pendiente pendon",
+    "shop": "travel_agency",
+    "name:es": "pequeños tesoros gimnasio pendiente pendon",
+    "id": "node/4507303505"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -74.0996236,
+      4.7390649
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4663534580",
+  "properties": {
+    "version": "2",
+    "name": "Tesoros del Mar",
+    "shop": "seafood",
+    "id": "node/4663534580"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -58.4650173,
+      -34.8191597
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4666508735",
+  "properties": {
+    "version": "1",
+    "name": "Escuela Especial Lenguaje: Pequeños tesoros",
+    "office": "educational_institution",
+    "addr:street": "Pasaje 21",
+    "id": "node/4666508735"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -73.1075653,
+      -36.7968088
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4947482430",
+  "properties": {
+    "version": "1",
+    "name": "Cazatesoros",
+    "shop": "antiques",
+    "id": "node/4947482430"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -1.1062436,
+      37.9798144
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4952851498",
+  "properties": {
+    "version": "1",
+    "name": "Sorosoro Ilaya",
+    "place": "village",
+    "id": "node/4952851498"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0898282,
+      13.8227489
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4970181682",
+  "properties": {
+    "version": "2",
+    "name": "Sassorosso",
+    "amenity": "restaurant",
+    "cuisine": "italian;wine",
+    "addr:city": "Kuala Lumpur",
+    "addr:street": "Lorong Yap Kwan Seng",
+    "id": "node/4970181682"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      101.7141717,
+      3.1637433
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/4994688422",
+  "properties": {
+    "version": "1",
+    "shop": "convenience",
+    "name:en": "Soroso 2",
+    "opening_hours": "24/7",
+    "id": "node/4994688422"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      110.3634266,
+      -7.7916992
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5021322319",
+  "properties": {
+    "version": "2",
+    "name": "ខេមបូឌាន ត្រេហ្សឺរ ឯ.ក",
+    "shop": "yes",
+    "name:en": "Cambodian Treasure Co., Ltd.",
+    "name:es": "Tecnología y Ciencias de la Vida en Tesoros Camboyanos - Huibang",
+    "name:ko": "휘방 캄보디아보물생명과기",
+    "name:zh": "徽邦・柬寶生命科技",
+    "id": "node/5021322319"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      104.8665229,
+      11.5853815
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5109666244",
+  "properties": {
+    "version": "2",
+    "ele": "1721",
+    "name": "Σωρός",
+    "source": "OpenCycleMap",
+    "name:en": "Soros",
+    "natural": "peak",
+    "id": "node/5109666244"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      24.8531178,
+      35.178139
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5175954416",
+  "properties": {
+    "version": "3",
+    "name": "Gyöngyösoroszi, Vízgyűjtő",
+    "highway": "bus_stop",
+    "shelter": "no",
+    "id": "node/5175954416"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8759534,
+      47.8503161
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5292448889",
+  "properties": {
+    "version": "1",
+    "name": "La Casa de Los Tesoros",
+    "amenity": "cafe",
+    "cuisine": "tea;coffee;american;mexican",
+    "smoking": "no",
+    "addr:city": "Catemaco",
+    "addr:street": "Aldama",
+    "internet_access": "wlan",
+    "outdoor_seating": "yes",
+    "addr:housenumber": "4",
+    "internet_access:fee": "no",
+    "internet_access:ssid": "INFINITUM4416",
+    "id": "node/5292448889"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -95.1098723,
+      18.4179638
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5300112351",
+  "properties": {
+    "version": "2",
+    "ele": "80",
+    "name": "Γάζωρος",
+    "phone": "no",
+    "name:de": "Bahnhof Gazoros",
+    "name:el": "Σιδηροδρομικός Σταθμός Γάζωρος",
+    "name:en": "Gazoros Railway Station",
+    "name:es": "Estación de Gazoros",
+    "name:fr": "Gare de Gázoros",
+    "name:it": "Stazione di Gasoros",
+    "name:jp": "ガゾロス 駅",
+    "name:ru": "Железнодорожная станция Газорос",
+    "railway": "station",
+    "int_name": "Gazoros",
+    "operator": "Οργανισμός Σιδηροδρόμων Ελλάδος",
+    "wheelchair": "no",
+    "railway:ref": "ΓΑ",
+    "internet_access": "no",
+    "public_transport": "station",
+    "railway:position": "149.2",
+    "internet_access:fee": "no",
+    "id": "node/5300112351"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      23.7663984,
+      41.0164301
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5339185765",
+  "properties": {
+    "version": "2",
+    "ele": "1152",
+    "name": "Σωρός",
+    "name:el": "Σωρός",
+    "name:en": "Soros",
+    "natural": "peak",
+    "id": "node/5339185765"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      24.5621887,
+      35.2275394
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5351227390",
+  "properties": {
+    "version": "1",
+    "name": "Sorosleak",
+    "amenity": "hospital",
+    "healthcare": "hospital",
+    "id": "node/5351227390"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.8922714,
+      43.4325769
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5740000236",
+  "properties": {
+    "version": "1",
+    "name": "Tesoros",
+    "shop": "gift",
+    "addr:city": "Guanajuato",
+    "addr:street": "Jardin de La Unión",
+    "addr:postcode": "36000",
+    "addr:housenumber": "7",
+    "id": "node/5740000236"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -101.2525928,
+      21.0157651
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5853853058",
+  "properties": {
+    "version": "2",
+    "name": "Nuestros Tres Tesoros",
+    "tourism": "hostel",
+    "id": "node/5853853058"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -75.6063243,
+      10.2278808
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/5924112585",
+  "properties": {
+    "version": "1",
+    "name": "Baúl de Tesoros",
+    "shop": "gift",
+    "email": "treasurechestpuertolopez@gmail.com",
+    "phone": "0987618418",
+    "name:en": "The Treasure Chest",
+    "addr:street": "Av. Machalilla",
+    "id": "node/5924112585"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -80.8119759,
+      -1.5617878
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/6011723129",
+  "properties": {
+    "version": "1",
+    "name": "Mis tesoros",
+    "shop": "Tienda_y_taller_de_articulos_de_greda",
+    "addr:city": "Melipilla (Pomaire)",
+    "addr:street": "Roberto Bravo",
+    "description": "Taller donde se fabrican y venden piezas de greda y que ademas es una vivienda",
+    "id": "node/6011723129"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.1496283,
+      -33.6472634
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/6143775982",
+  "properties": {
+    "version": "1",
+    "name": "Tesoros Del Duende",
+    "shop": "gift",
+    "id": "node/6143775982"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -73.9689121,
+      4.720921
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/6549183991",
+  "properties": {
+    "version": "1",
+    "name": "Sorosoro Ibaba Development Cooperative",
+    "phone": "+63437237432",
+    "office": "company",
+    "id": "node/6549183991"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0895154,
+      13.8107326
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/6575969986",
+  "properties": {
+    "version": "1",
+    "name": "Tinga Kanto (pa-Sorosoro)",
+    "highway": "bus_stop",
+    "id": "node/6575969986"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.088874,
+      13.7943455
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/6575970988",
+  "properties": {
+    "version": "1",
+    "name": "Patio Alfonso (pa-Sorosoro)",
+    "highway": "bus_stop",
+    "id": "node/6575970988"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0750537,
+      13.7925939
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/7042128819",
+  "properties": {
+    "version": "1",
+    "name": "Hacienda los Tesoros",
+    "place": "hamlet",
+    "id": "node/7042128819"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.1983819,
+      28.993701
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/7076450901",
+  "properties": {
+    "version": "1",
+    "bus": "yes",
+    "name": "Sorosoro Karsada",
+    "share_taxi": "yes",
+    "public_transport": "stop_position",
+    "id": "node/7076450901"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0757331,
+      13.8032296
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/7193214787",
+  "properties": {
+    "version": "1",
+    "name": "Sorostitute",
+    "sport": "climbing",
+    "climbing": "route_bottom",
+    "climbing:trad": "yes",
+    "climbing:length": "16",
+    "climbing:grade:uiaa": "5-",
+    "id": "node/7193214787"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -83.720429,
+      37.651971
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000005194620",
+  "properties": {
+    "version": "4",
+    "name": "Sorosis Street",
+    "source": "TIGER",
+    "highway": "residential",
+    "id": "node/1000000005194620"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -121.1962365,
+      45.5915227
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000008959028",
+  "properties": {
+    "version": "9",
+    "name": "Via de Tesoros",
+    "highway": "residential",
+    "tiger:cfcc": "A41",
+    "tiger:county": "Santa Clara, CA",
+    "tiger:reviewed": "no",
+    "tiger:name_base": "Via de Tesoros",
+    "id": "node/1000000008959028"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -121.9933213,
+      37.2518187
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000009502277",
+  "properties": {
+    "version": "4",
+    "source": "PGS",
+    "natural": "coastline",
+    "int_name": "Soros",
+    "wikidata": "Q7563653",
+    "wikipedia": "el:Σωρός Εχινάδων",
+    "id": "node/1000000009502277"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      21.024825,
+      38.4346679
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000016966197",
+  "properties": {
+    "version": "6",
+    "name": "El Camino Tesoros",
+    "access": "private",
+    "highway": "residential",
+    "tiger:cfcc": "A41",
+    "tiger:county": "Yavapai, AZ",
+    "tiger:name_base": "El Camino Tesoros",
+    "id": "node/1000000016966197"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.8209761,
+      34.8530106
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000019796582",
+  "properties": {
+    "version": "26",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "lanes": "2",
+    "oneway": "yes",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "surface": "asphalt",
+    "paved:date": "2015",
+    "id": "node/1000000019796582"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3748062,
+      65.2892788
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000021731686",
+  "properties": {
+    "version": "3",
+    "name": "Soros Court",
+    "highway": "residential",
+    "tiger:cfcc": "A41",
+    "tiger:county": "DeKalb, IL",
+    "tiger:reviewed": "no",
+    "tiger:zip_left": "60115",
+    "tiger:name_base": "Soros",
+    "tiger:name_type": "Ct",
+    "tiger:zip_right": "60115",
+    "id": "node/1000000021731686"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -88.7807398,
+      41.9568947
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000024544788",
+  "properties": {
+    "version": "6",
+    "name": "Sorosentie",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "mtb:scale": "0",
+    "id": "node/1000000024544788"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.4019602,
+      65.3037397
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000030699028",
+  "properties": {
+    "version": "9",
+    "name": "Оросієво",
+    "place": "village",
+    "landuse": "residential",
+    "name:en": "Orosiievo",
+    "name:hu": "Sárosoroszi",
+    "name:ru": "Оросиево",
+    "name:uk": "Оросієво",
+    "boundary": "administrative",
+    "admin_level": "8",
+    "name:prefix": "село",
+    "addr:postcode": "90263",
+    "id": "node/1000000030699028"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.8203081,
+      48.1632879
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000034547806",
+  "properties": {
+    "version": "4",
+    "name": "Csoroszlya utca",
+    "highway": "residential",
+    "id": "node/1000000034547806"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      21.612601,
+      47.4977875
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000040146119",
+  "properties": {
+    "version": "4",
+    "name": "Maria Soroslearen taldea",
+    "highway": "residential",
+    "id": "node/1000000040146119"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -3.0912794,
+      43.3183261
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000040146120",
+  "properties": {
+    "version": "4",
+    "name": "Mª Soroslea taldea",
+    "oneway": "yes",
+    "highway": "residential",
+    "id": "node/1000000040146120"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -3.0913257,
+      43.3179971
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000040268145",
+  "properties": {
+    "version": "6",
+    "to": "Kisoroszi",
+    "foot": "yes",
+    "from": "Visegrád-Szentgyörgypuszta",
+    "name": "Kisoroszi-Szentgyörgypuszta gyalogrév",
+    "ferry": "regular",
+    "route": "ferry",
+    "bicycle": "yes",
+    "website": "https://kompok-revek.hu/revatkelok/dunai-komp/kisoroszi-szentgyorgypuszta-komp/",
+    "duration": "10 minutes",
+    "motorcar": "no",
+    "operator": "Magyar Révhajósok Egyesülete",
+    "motor_vehicle": "no",
+    "id": "node/1000000040268145"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0085193,
+      47.8046243
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000071483014",
+  "properties": {
+    "version": "3",
+    "name": "510 Sorossi",
+    "power": "substation",
+    "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+    "building": "yes",
+    "id": "node/1000000071483014"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -52.2993795,
+      4.9376807
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000073515258",
+  "properties": {
+    "version": "6",
+    "name": "Sorosen Niementie",
+    "highway": "residential",
+    "name:fi": "Sorosen Niementie",
+    "surface": "paved",
+    "id": "node/1000000073515258"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      27.5319255,
+      60.9251875
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000117556112",
+  "properties": {
+    "version": "8",
+    "ref": "1113",
+    "name": "Kisoroszi út",
+    "highway": "secondary",
+    "id": "node/1000000117556112"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0105069,
+      47.8070165
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000129020626",
+  "properties": {
+    "version": "8",
+    "name": "Sorosentie",
+    "source": "GeoEye 2010",
+    "highway": "track",
+    "name:fi": "Sorosentie",
+    "surface": "gravel",
+    "id": "node/1000000129020626"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      26.1458379,
+      65.0903107
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000140483225",
+  "properties": {
+    "version": "11",
+    "name": "Sorosoro Main Road",
+    "lanes": "2",
+    "source": "Bing",
+    "highway": "tertiary",
+    "postal_code": "4024",
+    "id": "node/1000000140483225"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0577139,
+      14.329073
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000141611597",
+  "properties": {
+    "version": "3",
+    "name": "Via Sassorosso",
+    "oneway": "no",
+    "highway": "unclassified",
+    "surface": "asphalt",
+    "id": "node/1000000141611597"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      10.6023715,
+      44.2677387
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000145344062",
+  "properties": {
+    "version": "10",
+    "name": "法隆寺宝物館",
+    "name:en": "The Gallery of Horyuji Treasures",
+    "name:es": "Galería de tesoros de Horyuji",
+    "name:fr": "Galerie des trésors du temple Hōryū-ji",
+    "name:ja": "法隆寺宝物館",
+    "name:zh": "法隆寺宝物馆",
+    "tourism": "museum",
+    "building": "yes",
+    "name:ja_rm": "Hōryūji hōmotsukan",
+    "name:ja_kana": "ほうりゅうじほうもつかん",
+    "id": "node/1000000145344062"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      139.7740941,
+      35.7186783
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000154016843",
+  "properties": {
+    "version": "6",
+    "name": "Fundația Soros - Moldova",
+    "office": "ngo",
+    "name:en": "Soros Foundation - Moldova",
+    "name:ru": "Фонд Сорос - Молдова",
+    "website": "https://www.soros.md/",
+    "building": "yes",
+    "addr:city": "Chișinău",
+    "addr:street": "Strada Bulgară",
+    "addr:housenumber": "32",
+    "id": "node/1000000154016843"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      28.8352967,
+      47.0140444
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000167972823",
+  "properties": {
+    "version": "1",
+    "name": "Sorosenjärvi",
+    "source": "GeoEye 2010",
+    "natural": "water",
+    "id": "node/1000000167972823"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      26.1517307,
+      65.0908918
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000173593437",
+  "properties": {
+    "version": "4",
+    "name": "Calle María Auxiliadora / Maria Sorosle kalea",
+    "oneway": "yes",
+    "highway": "residential",
+    "name:es": "Calle María Auxiliadora",
+    "name:eu": "Maria Sorosle kalea",
+    "surface": "asphalt",
+    "id": "node/1000000173593437"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.9834482,
+      43.2971465
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000181519534",
+  "properties": {
+    "version": "2",
+    "name": "Sorosentie",
+    "highway": "residential",
+    "name:fi": "Sorosentie",
+    "id": "node/1000000181519534"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.7983807,
+      65.1356471
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000183427639",
+  "properties": {
+    "version": "5",
+    "name": "سروش",
+    "layer": "-1",
+    "oneway": "yes",
+    "tunnel": "yes",
+    "highway": "primary",
+    "name:en": "sorosh",
+    "surface": "asphalt",
+    "maxspeed": "50",
+    "id": "node/1000000183427639"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.6882276,
+      32.6781112
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000183427641",
+  "properties": {
+    "version": "4",
+    "name": "سروش",
+    "layer": "-1",
+    "oneway": "yes",
+    "tunnel": "yes",
+    "highway": "primary",
+    "name:en": "sorosh",
+    "surface": "asphalt",
+    "maxspeed": "50",
+    "id": "node/1000000183427641"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.6882925,
+      32.6780193
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000183580897",
+  "properties": {
+    "version": "3",
+    "name": "سروش",
+    "layer": "-1",
+    "oneway": "yes",
+    "tunnel": "yes",
+    "highway": "primary",
+    "name:en": "sorosh",
+    "surface": "asphalt",
+    "maxspeed": "50",
+    "id": "node/1000000183580897"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.6900495,
+      32.6777847
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000183580898",
+  "properties": {
+    "version": "3",
+    "name": "سروش",
+    "layer": "-1",
+    "oneway": "yes",
+    "tunnel": "yes",
+    "highway": "primary",
+    "name:en": "sorosh",
+    "surface": "asphalt",
+    "maxspeed": "50",
+    "id": "node/1000000183580898"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.690372,
+      32.6777483
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000183580899",
+  "properties": {
+    "version": "4",
+    "name": "سروش",
+    "oneway": "yes",
+    "cutting": "yes",
+    "highway": "primary",
+    "name:en": "sorosh",
+    "surface": "asphalt",
+    "maxspeed": "50",
+    "id": "node/1000000183580899"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.6894107,
+      32.6779969
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000189602291",
+  "properties": {
+    "version": "4",
+    "name": "Ermita de Nuestra Señora del Socorro",
+    "amenity": "place_of_worship",
+    "name:es": "Ermita de Nuestra Señora del Socorro",
+    "name:eu": "Sorospeneko Andra Maria baseliza",
+    "building": "yes",
+    "historic": "church",
+    "religion": "christian",
+    "wikidata": "Q65562719",
+    "denomination": "catholic",
+    "id": "node/1000000189602291"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -3.1217793,
+      43.3464746
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000196953450",
+  "properties": {
+    "version": "5",
+    "name": "Entrada a Soroscopa",
+    "source": "bing",
+    "highway": "unclassified",
+    "surface": "ground",
+    "id": "node/1000000196953450"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -65.606968,
+      -18.8661957
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000206347634",
+  "properties": {
+    "version": "2",
+    "name": "Cimitero di Sassorosso",
+    "landuse": "cemetery",
+    "religion": "christian",
+    "id": "node/1000000206347634"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      10.4031139,
+      44.1820807
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000210129457",
+  "properties": {
+    "version": "3",
+    "name": "Άγιος Στέφανος",
+    "landuse": "residential",
+    "name:el": "Άγιος Στέφανος",
+    "alt_name": "Σωρός",
+    "int_name": "Agios Stefanos",
+    "alt_name:el": "Σωρός",
+    "alt_int_name": "Soros",
+    "id": "node/1000000210129457"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.9371971,
+      39.3040691
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000231659940",
+  "properties": {
+    "version": "1",
+    "name": "Sorosis Tree Top Playground",
+    "leisure": "playground",
+    "id": "node/1000000231659940"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -121.1941423,
+      45.5911314
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000231659941",
+  "properties": {
+    "version": "6",
+    "name": "Sorosis Park",
+    "leisure": "park",
+    "wikidata": "Q7563656",
+    "wikipedia": "en:Sorosis Park",
+    "id": "node/1000000231659941"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -121.194273,
+      45.5904822
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000242787950",
+  "properties": {
+    "version": "2",
+    "name": "Los Tesoros Drive",
+    "highway": "residential",
+    "id": "node/1000000242787950"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -98.1921231,
+      26.2152657
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000261555570",
+  "properties": {
+    "version": "7",
+    "ref": "442",
+    "name": "Kocsoros út",
+    "oneway": "no",
+    "highway": "primary",
+    "maxspeed": "50",
+    "source:maxspeed": "HU:urban",
+    "id": "node/1000000261555570"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.206089,
+      47.1409443
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000261555604",
+  "properties": {
+    "version": "7",
+    "lcn": "yes",
+    "name": "Kocsoros út",
+    "highway": "residential",
+    "surface": "asphalt",
+    "id": "node/1000000261555604"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.2075632,
+      47.1383882
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000261555623",
+  "properties": {
+    "version": "4",
+    "lcn": "yes",
+    "name": "Kocsoros út",
+    "highway": "residential",
+    "id": "node/1000000261555623"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.2026232,
+      47.1469792
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000289707154",
+  "properties": {
+    "version": "5",
+    "name": "Vámosoroszi szárazmalom",
+    "building": "yes",
+    "id": "node/1000000289707154"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0504071,
+      47.6921139
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000293024226",
+  "properties": {
+    "version": "11",
+    "ref": "1113",
+    "name": "Kisoroszi út",
+    "highway": "secondary",
+    "id": "node/1000000293024226"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0568421,
+      47.7973377
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000293039742",
+  "properties": {
+    "version": "2",
+    "name": "Kisoroszi Művelődési Ház és Községi Könyvtár",
+    "amenity": "community_centre",
+    "building": "public",
+    "id": "node/1000000293039742"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0108233,
+      47.8076505
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000293042670",
+  "properties": {
+    "version": "4",
+    "name": "Szentolvasó Királynéja templom",
+    "amenity": "place_of_worship",
+    "alt_name": "Kisoroszi Szentolvasó Királynéja templom",
+    "building": "church",
+    "religion": "christian",
+    "start_date": "1719",
+    "denomination": "roman_catholic",
+    "url:miserend": "http://miserend.hu/?templom=2131",
+    "id": "node/1000000293042670"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0044003,
+      47.8081157
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000293044891",
+  "properties": {
+    "version": "1",
+    "name": "Kisoroszi kálvária",
+    "highway": "steps",
+    "id": "node/1000000293044891"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0008512,
+      47.8090237
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000307013968",
+  "properties": {
+    "version": "1",
+    "name": "Pikkusorosentie",
+    "bridge": "yes",
+    "highway": "track",
+    "surface": "gravel",
+    "tracktype": "grade1",
+    "id": "node/1000000307013968"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.4010127,
+      65.2989819
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000307013969",
+  "properties": {
+    "version": "3",
+    "name": "Pikkusorosentie",
+    "source": "GPS",
+    "highway": "residential",
+    "surface": "gravel",
+    "tracktype": "grade1",
+    "id": "node/1000000307013969"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3999371,
+      65.2998443
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000307598419",
+  "properties": {
+    "version": "8",
+    "name": "Avenida de los Tesoros",
+    "highway": "residential",
+    "surface": "unpaved",
+    "id": "node/1000000307598419"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.2038781,
+      28.986854
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000307598421",
+  "properties": {
+    "version": "4",
+    "name": "Privada de los Tesoros",
+    "highway": "residential",
+    "surface": "unpaved",
+    "id": "node/1000000307598421"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.2023472,
+      28.9887665
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000319862138",
+  "properties": {
+    "version": "2",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "layer": "1",
+    "bridge": "yes",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "id": "node/1000000319862138"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3959433,
+      65.2996275
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000319862139",
+  "properties": {
+    "version": "6",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "id": "node/1000000319862139"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3989293,
+      65.300974
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000341012507",
+  "properties": {
+    "version": "10",
+    "name": "Sorosgain-Eskitza-Otsoportillo bidea",
+    "highway": "track",
+    "id": "node/1000000341012507"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.1434925,
+      42.8533465
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000361811815",
+  "properties": {
+    "version": "3",
+    "name": "Calle de los Tesoros",
+    "highway": "residential",
+    "maxspeed": "30",
+    "id": "node/1000000361811815"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -109.4762508,
+      27.076286
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000365399031",
+  "properties": {
+    "version": "7",
+    "name": "Sorosy Street",
+    "noname": "yes",
+    "highway": "residential",
+    "surface": "unpaved",
+    "id": "node/1000000365399031"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -88.3275729,
+      17.5481645
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000370213680",
+  "properties": {
+    "version": "8",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "lanes": "2",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "surface": "asphalt",
+    "id": "node/1000000370213680"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3860501,
+      65.2914928
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000382493723",
+  "properties": {
+    "version": "3",
+    "name": "Tesoros de Panamá",
+    "source": "KG Ground Survey 2015",
+    "building": "apartments",
+    "addr:city": "Ciudad de Panamá",
+    "addr:street": "Avenida Samuel Lewis",
+    "id": "node/1000000382493723"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -79.5215845,
+      8.9856405
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000389172758",
+  "properties": {
+    "version": "2",
+    "name": "Calle Los Tesoros",
+    "highway": "residential",
+    "id": "node/1000000389172758"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -5.6333763,
+      42.048806
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000396233392",
+  "properties": {
+    "version": "1",
+    "name": "Mis Tesoros",
+    "amenity": "kindergarten",
+    "addr:city": "Teno",
+    "addr:street": "esmeralda",
+    "designation": "Jardin Infantil",
+    "addr:housename": "Jardin Infantil",
+    "addr:housenumber": "40",
+    "id": "node/1000000396233392"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.1599929,
+      -34.8696438
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000404114092",
+  "properties": {
+    "version": "1",
+    "name": "Los Tesoros",
+    "amenity": "restaurant",
+    "building": "yes",
+    "id": "node/1000000404114092"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -90.784917,
+      14.3011501
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000404488168",
+  "properties": {
+    "version": "3",
+    "name": "Lapangan Sidokabul Sorosutan",
+    "sport": "soccer",
+    "leisure": "pitch",
+    "id": "node/1000000404488168"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      110.3799969,
+      -7.8201871
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000413314591",
+  "properties": {
+    "version": "2",
+    "name": "Calle María Auxiliadora / Maria Sorosle kalea",
+    "highway": "pedestrian",
+    "name:es": "Calle María Auxiliadora",
+    "name:eu": "Maria Sorosle kalea",
+    "id": "node/1000000413314591"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.9828228,
+      43.2969449
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000413314592",
+  "properties": {
+    "version": "2",
+    "name": "Calle María Auxiliadora / Maria Sorosle kalea",
+    "highway": "pedestrian",
+    "name:es": "Calle María Auxiliadora",
+    "name:eu": "Maria Sorosle kalea",
+    "id": "node/1000000413314592"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.9830581,
+      43.2972468
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000414266361",
+  "properties": {
+    "version": "3",
+    "name": "Edificio Tresoros",
+    "building": "residential",
+    "addr:city": "Sabiñánigo",
+    "roof:shape": "gabled",
+    "addr:street": "Calle del Serrablo",
+    "roof:colour": "grey",
+    "addr:postcode": "22600",
+    "roof:material": "roof_tiles",
+    "building:colour": "brown",
+    "building:levels": "6",
+    "addr:housenumber": "55",
+    "roof:orientation": "along",
+    "building:material": "cement_block",
+    "id": "node/1000000414266361"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -0.367014,
+      42.5183503
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000416556392",
+  "properties": {
+    "version": "1",
+    "ele": "197",
+    "name": "Sorosis Reservoir",
+    "building": "storage_tank",
+    "addr:state": "OR",
+    "gnis:created": "05/22/1986",
+    "gnis:county_id": "065",
+    "gnis:feature_id": "1130052",
+    "id": "node/1000000416556392"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -121.1936985,
+      45.5888586
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000426150329",
+  "properties": {
+    "version": "2",
+    "name": "Tesoros de Hoy",
+    "shop": "furniture",
+    "source": "Reconocimiento cartográfico de campo 2016 por KG.",
+    "building": "yes",
+    "addr:street": "Francisco de Orellana",
+    "id": "node/1000000426150329"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -78.406945,
+      -0.2115108
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000428734801",
+  "properties": {
+    "version": "9",
+    "name": "Jalan Sorosutan",
+    "lanes": "2",
+    "width": "3",
+    "oneway": "no",
+    "source": "survey",
+    "highway": "unclassified",
+    "surface": "asphalt",
+    "motorcycle": "yes",
+    "smoothness": "good",
+    "id": "node/1000000428734801"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      110.3786315,
+      -7.8202674
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000435018440",
+  "properties": {
+    "version": "2",
+    "name": "Sorosoro - Bolbok transmission Line",
+    "power": "line",
+    "wires": "single",
+    "cables": "6",
+    "voltage": "60000",
+    "circuits": "2",
+    "operator": "Meralco",
+    "id": "node/1000000435018440"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0646899,
+      13.7988558
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000435018441",
+  "properties": {
+    "version": "3",
+    "name": "Sorosoro - Calicanto Subtransmission Line",
+    "power": "line",
+    "voltage": "60000",
+    "operator": "Meralco",
+    "id": "node/1000000435018441"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0760987,
+      13.8196557
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000435018442",
+  "properties": {
+    "version": "3",
+    "name": "Sorosoro - Lafarge/San Miguel Purefoods Subtransmission Line",
+    "power": "line",
+    "wires": "single",
+    "cables": "3",
+    "voltage": "60000",
+    "circuits": "1",
+    "id": "node/1000000435018442"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0761159,
+      13.8195674
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000435018444",
+  "properties": {
+    "version": "1",
+    "name": "Sorosoro - Mabini Subtransmission Line",
+    "layer": "2",
+    "power": "line",
+    "wires": "single",
+    "cables": "3",
+    "voltage": "60000",
+    "circuits": "1",
+    "operator": "Batangas Electric Cooperative",
+    "id": "node/1000000435018444"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0659438,
+      13.8042867
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000436781125",
+  "properties": {
+    "version": "1",
+    "name": "Gran Mercado Artesanal Tesoros del Inca",
+    "building": "retail",
+    "addr:street": "Avenida La Marina",
+    "id": "node/1000000436781125"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -77.0683997,
+      -12.0821803
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000440544395",
+  "properties": {
+    "version": "7",
+    "name": "Sorosoro - Bolbok transmission Line",
+    "power": "line",
+    "wires": "single",
+    "cables": "3",
+    "voltage": "69000",
+    "circuits": "2",
+    "operator": "National Grid Corporation of the Philippines",
+    "frequency": "60",
+    "id": "node/1000000440544395"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0565822,
+      13.7795037
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000450905522",
+  "properties": {
+    "version": "6",
+    "name": "Soro-soro Karsada Barangay Hall",
+    "office": "government",
+    "amenity": "townhall",
+    "alt_name": "Sorosoro Karsada Barangay Hall",
+    "building": "public",
+    "addr:city": "Batangas",
+    "addr:place": "Sorosoro Karsada",
+    "government": "administrative",
+    "addr:postcode": "4200",
+    "addr:province": "Batangas",
+    "opening_hours": "24/7",
+    "townhall:type": "village",
+    "id": "node/1000000450905522"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.076464,
+      13.8039703
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000461560163",
+  "properties": {
+    "version": "1",
+    "name": "Sorosoro - Bolbok transmission Line",
+    "power": "line",
+    "wires": "single",
+    "cables": "6",
+    "voltage": "69000",
+    "circuits": "2",
+    "operator": "National Grid Corporation of the Philippines",
+    "frequency": "60",
+    "id": "node/1000000461560163"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0638129,
+      13.7965427
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000463372083",
+  "properties": {
+    "version": "4",
+    "name": "سروش",
+    "highway": "residential",
+    "name:en": "Sorosh",
+    "surface": "asphalt",
+    "maxspeed": "30",
+    "id": "node/1000000463372083"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.7334874,
+      32.6891397
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000470276703",
+  "properties": {
+    "version": "2",
+    "name": "Mis 3 Tesoros",
+    "shop": "pet",
+    "source": "Reconocimiento terrestre por Kaart 2016",
+    "building": "yes",
+    "id": "node/1000000470276703"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -58.7414233,
+      -34.5205563
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000475271456",
+  "properties": {
+    "version": "8",
+    "lit": "yes",
+    "ref": "4",
+    "name": "Sorosoro National Highway",
+    "lanes": "4",
+    "width": "6.6",
+    "highway": "trunk",
+    "old_ref": "19",
+    "surface": "asphalt",
+    "maxspeed": "80",
+    "id": "node/1000000475271456"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0760777,
+      13.8054164
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000479761580",
+  "properties": {
+    "version": "3",
+    "name": "سروش",
+    "highway": "residential",
+    "name:en": "Sorosh",
+    "surface": "asphalt",
+    "maxspeed": "30",
+    "id": "node/1000000479761580"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.69201,
+      32.6821242
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000480050234",
+  "properties": {
+    "version": "2",
+    "amenity": "fast_food",
+    "building": "yes",
+    "wikidata": "Q26300636",
+    "addr:city": "Wantage",
+    "addr:street": "Mill Street",
+    "addr:postcode": "OX12 9AQ",
+    "addr:housename": "Soros",
+    "addr:housenumber": "20",
+    "id": "node/1000000480050234"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -1.4276647,
+      51.5895475
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000480550896",
+  "properties": {
+    "version": "4",
+    "ref": "109594",
+    "name": "Sorosoro Elementary School",
+    "source": "Department of Education, Philippines",
+    "amenity": "school",
+    "operator": "North District Batangas City Schools Division, DepEd",
+    "addr:city": "Batangas",
+    "start_date": "1954",
+    "isced:level": "1",
+    "source:date": "2012",
+    "addr:province": "Batangas",
+    "operator:type": "public",
+    "population:pupils:2012": "689",
+    "population:pupils:2015": "802",
+    "id": "node/1000000480550896"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0890261,
+      13.8155206
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000484192403",
+  "properties": {
+    "version": "3",
+    "name": "سروش",
+    "highway": "residential",
+    "name:en": "Sorosh",
+    "surface": "asphalt",
+    "maxspeed": "30",
+    "id": "node/1000000484192403"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      51.6936609,
+      32.6472403
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000494335841",
+  "properties": {
+    "version": "3",
+    "ref": "308202",
+    "name": "Tinga Sorosoro National High School",
+    "source": "Department of Education, Philippines",
+    "amenity": "school",
+    "old_name": "Tisisi National High School - Tinga Sorosoro Extension",
+    "operator": "East District Batangas City Schools Division, DepEd",
+    "addr:city": "Batangas",
+    "addr:place": "Sorosoro Ibaba",
+    "short_name": "Tisisi",
+    "start_date": "2010",
+    "isced:level": "2-3",
+    "source:date": "2012",
+    "addr:province": "Batangas",
+    "operator:type": "public",
+    "population:pupils:2012": "560",
+    "population:pupils:2015": "560",
+    "id": "node/1000000494335841"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0894022,
+      13.8077258
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000496755015",
+  "properties": {
+    "version": "1",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "lanes": "2",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "surface": "asphalt",
+    "paved:date": "2015",
+    "id": "node/1000000496755015"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3758824,
+      65.2894007
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000518896595",
+  "properties": {
+    "version": "4",
+    "name": "Calle Tesoros",
+    "highway": "residential",
+    "id": "node/1000000518896595"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -99.4605754,
+      19.7254954
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000519010367",
+  "properties": {
+    "version": "2",
+    "name": "Pikkusorosentie",
+    "highway": "residential",
+    "surface": "gravel",
+    "tracktype": "grade1",
+    "id": "node/1000000519010367"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.4049776,
+      65.2986004
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000522953139",
+  "properties": {
+    "version": "4",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "mtb:scale": "0",
+    "id": "node/1000000522953139"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.395554,
+      65.3066535
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000522954918",
+  "properties": {
+    "version": "3",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "surface": "paved",
+    "maxspeed": "40",
+    "mtb:scale": "0",
+    "id": "node/1000000522954918"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.4025476,
+      65.3034232
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000533852611",
+  "properties": {
+    "version": "1",
+    "name": "Ív-pillérsoros magtár",
+    "building": "barn",
+    "historic": "yes",
+    "id": "node/1000000533852611"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.9137787,
+      46.3143824
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000534021067",
+  "properties": {
+    "version": "1",
+    "name": "Ív-pillérsoros magtár",
+    "building": "barn",
+    "historic": "yes",
+    "id": "node/1000000534021067"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.8001508,
+      46.3501542
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000537072123",
+  "properties": {
+    "version": "1",
+    "name": "Sorosoro - Bolbok transmission Line",
+    "power": "line",
+    "wires": "single",
+    "cables": "3",
+    "voltage": "69000",
+    "circuits": "2",
+    "operator": "National Grid Corporation of the Philippines",
+    "frequency": "60",
+    "id": "node/1000000537072123"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      121.0626306,
+      13.7917756
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000540956733",
+  "properties": {
+    "version": "2",
+    "name": "Posyandu Sorosikun",
+    "source": "survey",
+    "building": "clinic",
+    "addr:full": "Jalan Haliulun",
+    "access:roof": "no",
+    "building:roof": "tin",
+    "operator:type": "government",
+    "building:floor": "ceramics",
+    "building:walls": "brick",
+    "building:levels": "1",
+    "backup_generator": "no",
+    "capacity:persons": "<50",
+    "building:condition": "good",
+    "building:structure": "confined_masonry",
+    "id": "node/1000000540956733"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      124.9071564,
+      -9.0893556
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000546561422",
+  "properties": {
+    "version": "2",
+    "name": "U.E. Soroscopa",
+    "source": "http://geo.gob.bo/download/?w=mde&l=edif_educativos2016",
+    "amenity": "school",
+    "operator": "Minedu",
+    "addr:city": "Soroscopa",
+    "description": "Minedu 71450062",
+    "addr:postcode": "PSI",
+    "operator:type": "public",
+    "id": "node/1000000546561422"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -65.6048738,
+      -18.8620205
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000566806201",
+  "properties": {
+    "version": "2",
+    "name": "Fraccionamiento Hacienda los Tesoros",
+    "landuse": "residential",
+    "id": "node/1000000566806201"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.2050079,
+      28.9907164
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000566810850",
+  "properties": {
+    "version": "3",
+    "name": "Privada de los Tesoros",
+    "highway": "residential",
+    "surface": "unpaved",
+    "id": "node/1000000566810850"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.2064564,
+      28.9856614
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000594421990",
+  "properties": {
+    "version": "1",
+    "name": "Balai Serbaguna Sorosutan",
+    "office": "government",
+    "source": "survey",
+    "building": "community_group_office",
+    "addr:full": "jalan surosutan no 26",
+    "access:roof": "yes",
+    "admin_level": "7",
+    "building:roof": "tin",
+    "building:levels": "1",
+    "capacity:persons": "100-250",
+    "building:material": "brick",
+    "building:condition": "good",
+    "building:structure": "confined_masonry",
+    "id": "node/1000000594421990"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      110.378492,
+      -7.8203111
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000655894524",
+  "properties": {
+    "version": "2",
+    "name": "Soroshoti Bari",
+    "amenity": "place_of_worship",
+    "building": "office",
+    "religion": "hindu",
+    "id": "node/1000000655894524"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      91.9760161,
+      21.4437195
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000673276200",
+  "properties": {
+    "version": "5",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "lanes": "2",
+    "oneway": "yes",
+    "highway": "tertiary",
+    "name:fi": "Sorosentie",
+    "surface": "asphalt",
+    "paved:date": "2015",
+    "id": "node/1000000673276200"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.373354,
+      65.289153
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000747887129",
+  "properties": {
+    "version": "1",
+    "name": "Rio de los Tesoros",
+    "waterway": "river",
+    "id": "node/1000000747887129"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.4898517,
+      40.0166911
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000747887130",
+  "properties": {
+    "version": "1",
+    "name": "Rio de los Tesoros",
+    "layer": "-1",
+    "tunnel": "culvert",
+    "waterway": "river",
+    "id": "node/1000000747887130"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.4853671,
+      40.0315824
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000747887131",
+  "properties": {
+    "version": "1",
+    "name": "Rio de los Tesoros",
+    "waterway": "river",
+    "id": "node/1000000747887131"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.4850774,
+      40.0322724
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000747887132",
+  "properties": {
+    "version": "1",
+    "name": "Rio de los Tesoros",
+    "layer": "-1",
+    "tunnel": "culvert",
+    "waterway": "river",
+    "id": "node/1000000747887132"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.4848253,
+      40.0330528
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000747887133",
+  "properties": {
+    "version": "1",
+    "name": "Rio de los Tesoros",
+    "waterway": "river",
+    "id": "node/1000000747887133"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.479949,
+      40.0363181
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000749291203",
+  "properties": {
+    "version": "2",
+    "name": "Sorosentie",
+    "lanes": "1",
+    "oneway": "yes",
+    "highway": "trunk_link",
+    "surface": "asphalt",
+    "id": "node/1000000749291203"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3728789,
+      65.2891933
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000749291204",
+  "properties": {
+    "version": "2",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "lanes": "2",
+    "oneway": "yes",
+    "highway": "trunk_link",
+    "name:fi": "Sorosentie",
+    "surface": "asphalt",
+    "paved:date": "2015",
+    "id": "node/1000000749291204"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3727778,
+      65.289147
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000749291206",
+  "properties": {
+    "version": "2",
+    "name": "Sorosentie",
+    "lanes": "1",
+    "oneway": "yes",
+    "highway": "trunk_link",
+    "surface": "asphalt",
+    "id": "node/1000000749291206"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3729839,
+      65.2891028
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000749291207",
+  "properties": {
+    "version": "1",
+    "name": "Sorosentie",
+    "lanes": "1",
+    "oneway": "yes",
+    "highway": "tertiary",
+    "surface": "asphalt",
+    "id": "node/1000000749291207"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3740696,
+      65.2891363
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000749566016",
+  "properties": {
+    "version": "1",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "lanes": "2",
+    "oneway": "yes",
+    "highway": "trunk_link",
+    "name:fi": "Sorosentie",
+    "surface": "asphalt",
+    "paved:date": "2015",
+    "id": "node/1000000749566016"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3731271,
+      65.2892298
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000749566017",
+  "properties": {
+    "version": "1",
+    "ref": "18756",
+    "name": "Sorosentie",
+    "lanes": "2",
+    "oneway": "yes",
+    "highway": "trunk_link",
+    "name:fi": "Sorosentie",
+    "surface": "asphalt",
+    "paved:date": "2015",
+    "id": "node/1000000749566017"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3729229,
+      65.2891537
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000756928119",
+  "properties": {
+    "version": "1",
+    "name": "Avenida de los Tesoros",
+    "highway": "residential",
+    "surface": "unpaved",
+    "id": "node/1000000756928119"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.1992947,
+      28.9900648
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000756928120",
+  "properties": {
+    "version": "1",
+    "name": "Avenida de los Tesoros",
+    "highway": "residential",
+    "surface": "unpaved",
+    "id": "node/1000000756928120"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -111.1974679,
+      28.9913459
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000767823268",
+  "properties": {
+    "version": "1",
+    "name": "Sorosentie",
+    "lanes": "1",
+    "oneway": "yes",
+    "highway": "trunk_link",
+    "surface": "asphalt",
+    "id": "node/1000000767823268"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.3730395,
+      65.2890096
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000775929003",
+  "properties": {
+    "version": "1",
+    "lcn": "yes",
+    "name": "Kocsoros út",
+    "highway": "residential",
+    "surface": "asphalt",
+    "id": "node/1000000775929003"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.20369,
+      47.1446498
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000775929004",
+  "properties": {
+    "version": "1",
+    "lcn": "yes",
+    "name": "Kocsoros út",
+    "highway": "residential",
+    "surface": "asphalt",
+    "maxspeed": "20",
+    "id": "node/1000000775929004"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      20.2057957,
+      47.1411781
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/1000000791188169",
+  "properties": {
+    "version": "1",
+    "ref": "113633",
+    "name": "Sorosimbahan Elementary School",
+    "amenity": "school",
+    "id": "node/1000000791188169"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      123.9819441,
+      11.8217293
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000000216162",
+  "properties": {
+    "version": "9",
+    "name": "Kisoroszi",
+    "type": "boundary",
+    "boundary": "administrative",
+    "wikidata": "Q944109",
+    "wikipedia": "hu:Kisoroszi",
+    "admin_level": "8",
+    "id": "node/2000000000216162"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0212182,
+      47.8085735
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000000453087",
+  "properties": {
+    "version": "5",
+    "name": "Σωρός",
+    "type": "multipolygon",
+    "name:el": "Σωρό",
+    "name:en": "Soros",
+    "name:fr": "Soros",
+    "natural": "beach",
+    "int_name": "Soros",
+    "id": "node/2000000000453087"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      25.0594138,
+      36.9714175
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000000812363",
+  "properties": {
+    "version": "1",
+    "name": "Σωρός",
+    "type": "multipolygon",
+    "place": "island",
+    "name:el": "Σωρός",
+    "int_name": "Soros",
+    "id": "node/2000000000812363"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      21.024825,
+      38.4346679
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000001417365",
+  "properties": {
+    "version": "5",
+    "name": "Gyöngyösoroszi",
+    "type": "boundary",
+    "boundary": "administrative",
+    "wikidata": "Q1030383",
+    "wikipedia": "hu:Gyöngyösoroszi",
+    "admin_level": "8",
+    "id": "node/2000000001417365"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8768457,
+      47.8609165
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000001452458",
+  "properties": {
+    "version": "5",
+    "name": "Vámosoroszi",
+    "type": "boundary",
+    "boundary": "administrative",
+    "wikidata": "Q1186245",
+    "wikipedia": "hu:Vámosoroszi",
+    "admin_level": "8",
+    "id": "node/2000000001452458"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.6897979,
+      47.9943878
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000002023158",
+  "properties": {
+    "version": "39",
+    "to": "Szentendre, autóbusz-állomás",
+    "ref": "898",
+    "from": "Kisoroszi, Hősök tere",
+    "name": "898 \"A\" v: Kisoroszi, Hősök tere => Szentendre, autóbusz-állomás",
+    "type": "route",
+    "route": "bus",
+    "ref:volan": "2943",
+    "id": "node/2000000002023158"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0754888,
+      47.6603584
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000002023159",
+  "properties": {
+    "version": "40",
+    "to": "Kisoroszi, Hősök tere",
+    "ref": "898",
+    "from": "Szentendre, autóbusz-állomás",
+    "name": "898 \"A\": Szentendre, autóbusz-állomás => Kisoroszi, Hősök tere",
+    "type": "route",
+    "route": "bus",
+    "ref:volan": "2943",
+    "id": "node/2000000002023159"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0104358,
+      47.8073255
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000002961095",
+  "properties": {
+    "version": "13",
+    "name": "Σορός",
+    "type": "multipolygon",
+    "place": "neighbourhood",
+    "name:el": "Σορός",
+    "name:en": "Soros",
+    "id": "node/2000000002961095"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      23.8125408,
+      38.0419695
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000003867357",
+  "properties": {
+    "version": "10",
+    "jel": "z4",
+    "name": "Z4 (Zöld csatlakozóút Gyöngyösorosziból)",
+    "type": "route",
+    "route": "hiking",
+    "symbol": "green square",
+    "network": "lwn",
+    "symbol:hu": "zöld négyzet",
+    "osmc:symbol": "green:white:green_rectangle",
+    "id": "node/2000000003867357"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8840627,
+      47.8370724
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000004550728",
+  "properties": {
+    "version": "7",
+    "name": "Csoroszlya Farm Kft.",
+    "type": "multipolygon",
+    "landuse": "orchard",
+    "id": "node/2000000004550728"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      18.4967349,
+      47.480912
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000005615499",
+  "properties": {
+    "version": "6",
+    "name": "Sorosutan",
+    "type": "boundary",
+    "boundary": "administrative",
+    "admin_level": "7",
+    "id": "node/2000000005615499"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      110.381011,
+      -7.8221732
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000005722795",
+  "properties": {
+    "version": "1",
+    "name": "Vila Kosoroski",
+    "type": "multipolygon",
+    "place": "neighbourhood",
+    "landuse": "residential",
+    "alt_name": "Kosoroski",
+    "id": "node/2000000005722795"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -53.8212456,
+      -29.6947549
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000006810748",
+  "properties": {
+    "version": "1",
+    "name": "2024 Kisoroszi",
+    "type": "boundary",
+    "source": "Magyar Posta",
+    "boundary": "postal_code",
+    "postal_code": "2024",
+    "id": "node/2000000006810748"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0212182,
+      47.8085735
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000006823003",
+  "properties": {
+    "version": "1",
+    "name": "4966 Vámosoroszi",
+    "type": "boundary",
+    "source": "Magyar Posta",
+    "boundary": "postal_code",
+    "postal_code": "4966",
+    "id": "node/2000000006823003"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      22.6897979,
+      47.9943878
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000006841606",
+  "properties": {
+    "version": "1",
+    "name": "3211 Gyöngyösoroszi",
+    "type": "boundary",
+    "source": "Magyar Posta",
+    "boundary": "postal_code",
+    "postal_code": "3211",
+    "id": "node/2000000006841606"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.8768457,
+      47.8682214
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000007187272",
+  "properties": {
+    "version": "3",
+    "url": "http://turistautak.hu/poi.php?id=156423",
+    "name": "Magyar Golf Club - Kisoroszi",
+    "type": "multipolygon",
+    "email": "recepcio@magyargolfclub.hu",
+    "phone": "+36 26 592 020",
+    "leisure": "golf_course",
+    "name:en": "Hungarian Golf Club - Kisoroszi",
+    "website": "http://magyargolfclub.hu/",
+    "addr:city": "Kisoroszi",
+    "wheelchair": "limited",
+    "description": "18 hole Par 72",
+    "addr:country": "HU",
+    "addr:postcode": "2024",
+    "toilets:wheelchair": "limited",
+    "id": "node/2000000007187272"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0289159,
+      47.8086799
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000008997835",
+  "properties": {
+    "version": "1",
+    "to": "Tahitótfalu, Hősök tere",
+    "ref": "898",
+    "from": "Kisoroszi, Hősök tere",
+    "name": "898 \"B\" v: Kisoroszi, Hősök tere => Tahitótfalu, Hősök tere",
+    "type": "route",
+    "route": "bus",
+    "ref:volan": "2943",
+    "id": "node/2000000008997835"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0890863,
+      47.7542888
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000008997836",
+  "properties": {
+    "version": "1",
+    "to": "Kisoroszi, Hősök tere",
+    "ref": "898",
+    "from": "Tahitótfalu, Hősök tere",
+    "name": "898 \"B\": Tahitótfalu, Hősök tere => Kisoroszi, Hősök tere",
+    "type": "route",
+    "route": "bus",
+    "ref:volan": "2943",
+    "id": "node/2000000008997836"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      19.0104078,
+      47.8073956
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/2000000009402298",
+  "properties": {
+    "version": "1",
+    "name": "Senda de los Tesoros de Abantos",
+    "type": "route",
+    "route": "hiking",
+    "network": "lwn",
+    "website": "http://sendasdemadrid.es/sendas/ficheros/pdf/Folleto_Senda_54_Tesoros_Abantos_2012.pdf",
+    "roundtrip": "yes",
+    "id": "node/2000000009402298"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -4.1549988,
+      40.5946732
+    ]
+  }
+}
+]
+}
