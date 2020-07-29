@@ -1,0 +1,4 @@
+*.o5m
+*.pbf
+*.osm
+osmfilter_tempfile*
