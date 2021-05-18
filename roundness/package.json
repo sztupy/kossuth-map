@@ -1,0 +1,18 @@
+{
+  "name": "roundness",
+  "version": "1.0.0",
+  "description": "To determine roundness first download an appropriate JSON from MapIt. For example for Germany the data is from https://global.mapit.mysociety.org/areas/O06.html?country=DE",
+  "main": "max-circle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsts": "^2.6.1",
+    "max-inscribed-circle": "^2.0.1"
+  },
+  "bin": {
+    "max-circle": "./max-circle.js"
+  }
+}
