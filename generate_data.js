@@ -166,6 +166,9 @@ const canvas = createCanvas(SIZE_X, SIZE_Y);
 const ctx = canvas.getContext('2d');
 const svgCtx = new C2S({width: SIZE_X, height: SIZE_Y, document: new jsdom.JSDOM().window.document});
 
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
 console.log('Generating Voronoi Diagram');
 // calculate the data
 const delaunay = Delaunay.from(points);
